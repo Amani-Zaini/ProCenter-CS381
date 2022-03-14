@@ -104,3 +104,8 @@ option {
 .for-height {
   height: 350px;
 }
+
+/* -----------My appointment page------------- */
+h2 {
+  text-align: center;
+}
