@@ -31,29 +31,32 @@
   padding: 4rem !important;
 }
 
+.logo {
+  height: 90px;
+  width: 90px;
+}
 /* ------------------contact us page--------- */
 
-.margin-form-2-green{
-  background-color: #65B897;
+.margin-form-2-green {
+  background-color: #65b897;
   margin-top: 160px;
   margin-right: 10px;
 }
-.margin-form-1{
-margin-top: 0px;
-margin-bottom: 100px;
+.margin-form-1 {
+  margin-top: 0px;
+  margin-bottom: 100px;
 }
-.give-height{
-height: 90px;
+.give-height {
+  height: 90px;
 }
 #Back-Ground-Circle-5 {
   border-radius: 50%;
   display: inline-block;
   margin-left: 10px;
-  margin-top:100px;
+  margin-top: 100px;
   width: 400px;
   height: 400px;
-  background: #EABDC2;
-  
+  background: #eabdc2;
 }
 #Back-Ground-Circle-6 {
   border-radius: 50%;
@@ -62,38 +65,36 @@ height: 90px;
   margin-top: 80px;
   width: 200px;
   height: 200px;
-  background: #EABDC2;
+  background: #eabdc2;
 }
 
 #Back-Ground-Circle-7 {
   border-radius: 50%;
   margin-left: 1000px;
-  margin-top:0px;
+  margin-top: 0px;
   width: 300px;
   height: 300px;
-  background: #DD979F;
+  background: #dd979f;
 }
-#Back-Ground-Circle-8{
+#Back-Ground-Circle-8 {
   border-radius: 50%;
   display: inline-block;
   margin-left: 800px;
-  margin-top:0px;
+  margin-top: 0px;
   width: 100px;
   height: 100px;
-  background: #F0D1D4;
+  background: #f0d1d4;
 }
-
 
 /* -------------------be an educator------------------- */
 #Back-Ground-Circle-1 {
   border-radius: 50%;
   display: inline-block;
   margin-left: 10px;
-  margin-top:30px;
+  margin-top: 30px;
   width: 400px;
   height: 400px;
-  background: #F4DFE2;
-  
+  background: #f4dfe2;
 }
 #Back-Ground-Circle-2 {
   border-radius: 50%;
@@ -102,68 +103,65 @@ height: 90px;
   margin-top: 60px;
   width: 200px;
   height: 200px;
-  background: #EABDC2;
+  background: #eabdc2;
 }
 
 #Back-Ground-Circle-3 {
   border-radius: 50%;
   display: inline-block;
   margin-left: 1200px;
-  margin-top:0px;
+  margin-top: 0px;
   width: 300px;
   height: 300px;
-  background: #DD979F;
+  background: #dd979f;
 }
-#Back-Ground-Circle-4{
+#Back-Ground-Circle-4 {
   border-radius: 50%;
   display: inline-block;
   margin-left: 900px;
-  margin-top:0px;
+  margin-top: 0px;
   width: 100px;
   height: 100px;
-  background: #F0D1D4;
+  background: #f0d1d4;
 }
-.margin-form{
-  height:800px;
-  margin: 50px 170px ;
-  background-color: #65B897;
+.margin-form {
+  height: 800px;
+  margin: 50px 170px;
+  background-color: #65b897;
 }
-.margen-left{
- 
+.margen-left {
   margin-left: 100px;
   margin-top: 5px;
 }
 
 /* make select your level gray and other option black*/
 select:required:invalid {
-  color:gray;
+  color: gray;
 }
 option {
   color: black;
-  
 }
 /* -------------about page----------------- */
-.margin-top{
+.margin-top {
   margin-top: 50px;
-  
 }
-.for-height-dark-green{
+.for-height-dark-green {
   height: 350px;
   padding-top: 80px;
- background-color: #65B897;
+  background-color: #65b897;
 }
-.light-green{
-  background-color: #A5CDBD;
+.light-green {
+  background-color: #a5cdbd;
 }
-.for-height-pink{
+.for-height-pink {
   height: 350px;
   padding-top: 80px;
- background-color: #F0D1D4;
+  background-color: #f0d1d4;
 }
-.for-height-light-green{
+.for-height-light-green {
   height: 350px;
   padding-top: 80px;
- background-color: #A5CDBD;
+  background-color: #a5cdbd;
 }
 
 /* -----------My appointment page------------- */
@@ -172,13 +170,13 @@ h2 {
 }
 
 /* -----------Profile page------------- */
-.dark-green-background{
-  background-color:#65B897;
+.dark-green-background {
+  background-color: #65b897;
 }
-.light-green-background{
-  background-color: #A5CDBD;
+.light-green-background {
+  background-color: #a5cdbd;
 }
-.margin{
+.margin {
   margin-top: 120px;
   width: 800px;
   margin-bottom: 200px;
