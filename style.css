@@ -5,7 +5,7 @@
   flex-wrap: wrap;
   gap: 16px;
   justify-content: space-around;
-  padding: 5rem;
+  padding: 1rem;
   margin-bottom: 5rem;
   margin-left: 2rem;
 }
@@ -17,15 +17,15 @@
   height: 50px;
 }
 
+.HOME-IMAGE {
+  max-width: 100% !important;
+  max-height: 100% !important;
+}
 .social-icons {
   width: 20px;
   height: 20px;
 }
 
-.Home-img-size {
-  width: 900px;
-  height: 900px;
-}
 .section-margin {
   margin-bottom: 2rem !important;
   padding: 4rem !important;
@@ -34,6 +34,10 @@
 .logo {
   height: 90px;
   width: 90px;
+}
+
+.Edit-out-logo-size{
+  font-size:16px;
 }
 /* ------------------contact us page--------- */
 
@@ -85,6 +89,10 @@
   height: 100px;
   background: #f0d1d4;
 }
+.logo-width{
+  width:50px;
+}
+
 
 /* -------------------be an educator------------------- */
 #Back-Ground-Circle-1 {
@@ -143,7 +151,7 @@ option {
 }
 /* -------------about page----------------- */
 .margin-top {
-  margin-top: 50px;
+  margin-top: 70px;
 }
 .for-height-dark-green {
   height: 350px;
@@ -180,4 +188,18 @@ h2 {
   margin-top: 120px;
   width: 800px;
   margin-bottom: 200px;
+}
+.margin-top-class{
+  margin-top: 300px;
+}
+/* ----------------footer----------- */
+footer {
+  clear: both;
+  position: relative;
+  height: 200px;
+  /* bottom: unset; */
+}
+
+.progile-right {
+  right: 0;
 }
