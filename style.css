@@ -37,7 +37,7 @@
 }
 
 .wrapper {
-  width: 1000px;
+  width: 900;
 }
 .box {
   display: flex;
@@ -55,8 +55,8 @@
   padding: 10px;
 }
 .image-width {
-  width: 500px;
-  height: 500px;
+  width: 555px;
+  height: 555px;
 }
 /* ------------------contact us page--------- */
 
