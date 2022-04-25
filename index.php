@@ -10,21 +10,8 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-          <!-- -----------------------   START OF JQUERY SCRIPT ----------------------- -->
-          <script>
-
-            function redirectFindEdu(){
-                window.location  = "find-educator.php";
-            }
-
-             //function to redirect user to Be an Educator
-            function redirectBeEdu(){
-                window.location  = "be-educator.php";
-            }
-            
-          </script>
-          <!-- -----------------------   END OF JQUERY SCRIPT ------------------------- -->    
+    />    
+    <script src="main.js"></script>
   </head>
   <body>
    
@@ -113,11 +100,6 @@
     </header>
 
     <!-- ---------------------------------------------- End of header part------------------------------------------------------ -->
-    <script>
-      function redirectStuAppointment(){
-        window.location  = "student-schedual.php";
-      }
-    </script>
 
     <!-- ---------------------------------------------- intro home page part------------------------------------------------------ -->
     <br><br>

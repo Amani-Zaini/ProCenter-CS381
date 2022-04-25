@@ -108,7 +108,7 @@
   <table class="w3-table-all ">
     <thead>
       <tr class="w3-teal ">
-        <th>#</th>
+        <th>Appointment #</th>
         <th>Course</th>
         <th>Appointment Date</th>
         <th>Available Time</th>
@@ -121,10 +121,11 @@
     <?php
      if(isset($_POST['submit']))
      {
+         $id=$_POST['id'];
          $course=$_POST['course'];
          $date=$_POST['date'];
          $time=$_POST['time'];
-         $sql="insert into eduschedule(course,date,time) values('$course','$date','$time')";
+         $sql="insert into eduschedule(id,course,date,time) values('$id','$course','$date','$time')";
          if( mysqli_query($conn,$sql)){
            echo "<script>alert('New appointment is added');</script>";
           }
@@ -135,23 +136,22 @@
      }
     ?>
       <form method="post" action="">
-      <td></td>
-      <td><input type="text" id="course" name="course" size="10"></td>
+      <td><input type="number" id="id" name="id" ></td>
+      <td><input type="text" id="course" name="course" ></td>
       <td><input type="date" id="date" name="date"  ></td>
       <td><input type="time" id="time" name="time"  ></td>
-      <td><button type="submit"  name="submit" class="w3-teal w3-border-teal w3-round-xlarge w3-padding">
-      <i class="fa fa-plus  Edit-out-logo-size" ></i> Add new Appointment </button>
+      <td><button type="submit"  name="submit" class="w3-teal w3-border-teal w3-round-xlarge w3-padding" >
+      <i class="fa fa-plus  Edit-out-logo-size add" ></i> Add new Appointment </button>
       </td>
     </form>
 
     </tr>
     <?php   
-      $i=1;  
            if ($num = mysqli_num_rows($run)>0) {  
                 while ($result = mysqli_fetch_assoc($run)) {  
                      echo "  
                           <tr class='data'>   
-                          <td>".$i++."</td>
+                          <td>".$result['id']."</td>  
                           <td>".$result['course']."</td>  
                           <td>".$result['date']."</td>  
                           <td>".$result['time']."</td> 
@@ -161,6 +161,7 @@
                 }  
            }  
       ?>  
+    
   </table>
 </div>
 </div>
@@ -201,5 +202,6 @@
       </div>
     </footer>
     <!--  ---------------------------------------------- End of footer part part------------------------------------------------------ -->
+  
   </body>
 </html> 

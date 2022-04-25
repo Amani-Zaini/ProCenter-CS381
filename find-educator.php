@@ -10,13 +10,7 @@
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <title>CSE ProCenter </title>
   </head>
-  <script>
-
-    function redirectStuAppointment(){
-      window.location  = "student-schedual.php";
-    }
-
-  </script>
+  <script src="main.js"></script>
   <body>
     <!-- ----------------------------------------------------header part------------------------------------------------------ -->
     
