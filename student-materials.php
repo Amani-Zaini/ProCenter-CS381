@@ -1,3 +1,4 @@
+<?php include 'filesLogic.php';?>
 <html>
 <title>Student-My materials</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -91,28 +92,33 @@
 </header>
  <!-- ---------------------------------------------- End of header part------------------------------------------------------ -->
 <!-- ---------------------------------------------- Materials part------------------------------------------------------ -->
+<!-- ---------------------------------------------- Download ------------------------------------------------------ -->
 <div class="w3-container w3-padding-64">
-  <h2> Materials </h2>
-  
-  <table class="w3-table w3-border w3-bordered w3-hoverable">
+<h2> Materials </h2>
+<table class =  "w3-table-all w3-hoverable">
+<thead>
+    <tr class="w3-teal">
+    <th>No.</th>
+    <th>Filename</th>
+    <th>size (in mb)</th>
+    <th>Action</th>
+</tr>
+</thead>
+<tbody>
+  <?php foreach ($files as $file): ?>
     <tr>
-      <td>CSS_Effect_List_Text</td>
+      <td><?php echo $file['no']; ?></td>
+      <td><?php echo $file['name']; ?></td>
+      <td><?php echo floor($file['size'] / 1000) . ' KB'; ?></td>
+      <td><a href="student-materials.php?file_id=<?php echo $file['no'] ?>">Download</a></td>
     </tr>
-    <tr>
-      <td>CSS_Navigation</td>
-    </tr>
-    <tr>
-      <td>CSS3-P2 Containers</td>
-    </tr>
-  </table>
-</div>
+  <?php endforeach;?>
 
-  <div class="w3-container ">
-    <p>
-    <button class="w3-button w3-teal w3-border w3-border-teal w3-round-large w3-hover-white">Upload Material</button>
-    </p>
-  </div>
-<br><br>
+</tbody>
+</table>
+</div>
+<!-- ---------------------------------------------- End of Download ------------------------------------------------------ -->
+
    <!-- ----------------------------------------------End of Materials part------------------------------------------------------ -->
    
     <!--  ------------------------------------------------ footer part part------------------------------------------------------ -->

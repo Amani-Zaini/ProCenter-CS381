@@ -1,3 +1,4 @@
+<?php include 'filesLogic.php';?>
 <!DOCTYPE html>
 <html>
 <title>Educator-My materials</title>
@@ -94,32 +95,45 @@
 
  <!-- ---------------------------------------------- End of header part------------------------------------------------------ -->
  <!-- ---------------------------------------------- Materials part------------------------------------------------------ -->
-
-<div class="w3-container margin-top ">
+ <!-- ---------------------------------------------- Download ------------------------------------------------------ -->
+ <div class="w3-container margin-top ">
   <h2> Materials </h2>
-  <table class="w3-table w3-border w3-bordered w3-hoverable">
+<table class = "w3-table-all w3-hoverable">
+<thead>
+    <tr class="w3-teal">
+    <th>No.</th>
+    <th>Filename</th>
+    <th>size (in mb)</th>
+    <th>Downloads</th>
+    <th>Action</th>
+</tr>
+</thead>
+<tbody>
+  <?php foreach ($files as $file): ?>
     <tr>
-      <td>CSS_Effect_List_Text</td>
+      <td><?php echo $file['no']; ?></td>
+      <td><?php echo $file['name']; ?></td>
+      <td><?php echo floor($file['size'] / 1000) . ' KB'; ?></td>
+      <td><?php echo $file['downloads']; ?></td>
+      <td><a href="student-materials.php?file_id=<?php echo $file['no'] ?>">Download</a></td>
     </tr>
-    <tr>
-      <td>CSS_Navigation</td>
-    </tr>
-    <tr>
-      <td>CSS3-P2 Containers</td>
-    </tr>
-  </table>
-<br><br>
-<div class="w3-container w3-padding-32">
-  <p>
-  <button class="w3-button w3-teal w3-border w3-border-teal w3-round-large w3-hover-white ">Upload Material</button>
-  </p>
+  <?php endforeach;?>
+<!-- ---------------------------------------------- End of Download ------------------------------------------------------ -->
+<!-- ---------------------------------------------- Upload ------------------------------------------------------ -->
+</tbody>
+</table>
+<div class="row">
+        <form action="#" method="post" enctype="multipart/form-data" >
+          <h3>Upload File</h3>
+          <input type="file" name="myfile[]" id="file" multiple> <br>
+          <button class="w3-button w3-teal w3-border w3-border-teal w3-round-large w3-hover-white" type="submit" name="save"> Upload Material</button>    
+        </form>
+      </div>
+  </div>
 </div>
 <br><br>
-</div>
-
-  
-  
- <!-- ----------------------------------------------End of Materials part------------------------------------------------------ -->
+<!-- ---------------------------------------------- End of Upload ------------------------------------------------------ -->
+<!-- ----------------------------------------------End of Materials part------------------------------------------------------ -->
      <!--  ------------------------------------------------ footer part part------------------------------------------------------ -->
      <footer class="w3-teal">
       <div class="w3-container">
