@@ -16,7 +16,7 @@
             ><i class="fa fa-edit w3-margin-right Edit-out-logo-size" ></i>Edit Profile</a
           >
           <a
-            href="log out.php?logout"
+            href="logOut.php?logout"
             class="w3-bar-item w3-button  w3-mobile w3-hover-light-grey w3-hover-text-pink"
             ><i class="fa fa-sign-out w3-margin-right Edit-out-logo-size" ></i>Log out</a
           >
@@ -58,7 +58,7 @@
         </div>
 
         <a
-          href="about.html"
+          href="about.php"
           class="w3-bar-item w3-button w3-hover-white w3-hover-text-pink w3-padding-32"
           >About</a
         >

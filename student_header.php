@@ -66,7 +66,7 @@
         </div>
 
         <a
-          href="about.html"
+          href="about.php"
           class="w3-bar-item w3-button w3-hover-white w3-hover-text-pink w3-padding-32"
           >About</a
         >

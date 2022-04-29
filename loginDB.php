@@ -1,7 +1,7 @@
 <?php
 session_start(); //start the session
 include_once("dbCon.php");
-if(isset($_POST['submit']))//check wheather the user click on log in button
+if(isset($_POST['sub']))//check wheather the user click on log in button
 {   
    
            
@@ -17,9 +17,17 @@ if(isset($_POST['submit']))//check wheather the user click on log in button
                 $_SESSION["name"]=$row['name'];
                 $_SESSION["user_type"]=$row['user_type']; 
               
-                    header("location: index.php");
-                    
+                    if( $_SESSION["user_type"] == 'student' || $_SESSION["user_type"] == 'educator' )
+                    {
+                        header("location: index.php");
+                    } 
+                    if( $_SESSION["user_type"] == 'admin')  
+                    {
+                        header("location: requests.php");
+                    }
+
             }
+               
             else
             {
                 //$message="Invalid Username or Password!";

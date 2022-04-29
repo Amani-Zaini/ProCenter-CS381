@@ -27,7 +27,7 @@
 </h1></div>
 <div class="w3-row">
   <div class="w3-col " >
-    <form action="#" class=" w3-container w3-card-2 width-login w3-half w3-display-right  ">
+    <form action="loginDB.php" method="post" class=" w3-container w3-card-2 width-login w3-half w3-display-right  ">
     <br>
     <div>
       <h2 class="w3-center w3-text-teal "><i class="fa fa-sign-in w3-margin-right Edit-out-logo-size " ></i>Log in</h2>
@@ -36,7 +36,7 @@
       <div class="w3-row w3-section">
         <div class="w3-col logo-width" ><i class="fa fa-user w3-xlarge w3-text-teal" ></i></div>
           <div class="w3-rest">
-            <input class="w3-input w3-border" name="id_login" type="text" placeholder="User name">
+            <input class="w3-input w3-border" name="college_id" type="text" placeholder="User name">
           </div>
       </div>
       <div class="w3-row w3-section">
@@ -46,7 +46,7 @@
             </div>
         </div>      
       <div class=" w3-padding-16"> 
-        <input class=" w3-center w3-round-large w3-padding-large w3-teal w3-input w3-hover-shadow" type="submit" value="Log in">
+        <input class=" w3-center w3-round-large w3-padding-large w3-teal w3-input w3-hover-shadow" name="sub" type="submit" value="Log in">
         <a href="#" class="w3-button w3-hover-none ">Forget password?</a>
       </div>
       </form>
@@ -55,7 +55,7 @@
   </div>
   <div class="w3-rest">
     <div class=" w3-half w3-margin ">
-      <img src="/images/ProCenter login.svg"  alt="ProCenter image" >
+      <img src="images/ProCenter login.svg"  alt="ProCenter image" >
      </div>
   </div>
 </div>
