@@ -69,7 +69,7 @@
   
       <form method="post" action="">
       <td></td>
-      <td><input type="text" id="stuID" name="stuID" value=<?php echo $_SESSION['college_id'];?> disabled></td>
+      <td><input type="text" id="stuID" name="stuID" value=<?php echo $_SESSION['college_id'];?> readonly></td>
       <td>
       
       <?php

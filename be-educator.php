@@ -58,39 +58,9 @@
  }
 ?>
 <div class="margin-form w3-text-white w3-panel w3-card-4 w3-round-xlarge ">
-<<<<<<< HEAD
- <form action="#">
-   <h1 class="w3-center"> Want to be an educator?</h1><br>
-   <p class="w3-left-align"><b>Please fill this form</b> </p>
-   <hr>
-   <div class="w3-container ">
-    <p> <label for="FN"><b>First name</b></label><br>
-     <input class=" w3-input " type="text" name="FN" placeholder="First name"></p>
-    <p> <label for="LN"><b>Last name</b></label><br>
-     <input class=" w3-input " type="text" name="LN" placeholder="Last name"></p>
-     <p><label for="ID"><b>Student ID</b></label><br>
-     <input class=" w3-input " type="text" name="ID" placeholder="College ID"></p>
-     <p><label for="level"><b>Level</b></label><br>
-     <select class=" w3-input " required>
-       <option value="" disabled selected hidden><b>Select level</b> </option>
-       <!--hidden word mean that this option will be hidden not visible alongside the other options-->
-       <option class=" w3-input">First-year</option>
-       <option>Sophomore</option>
-       <option>Junior</option>
-       <option>Senior</option>
-     </select></p>
-    <p> <label for="Subject"><b>Subject</b></label><br>
-     <input class=" w3-input " type="text" name="Subject" placeholder="Course name"></p>
-     <p><label for="GPA"><b>GPA</b></label><br>
-     <input class=" w3-input " type="text" name="GPA" placeholder=" GPA"></p>
-   </div>
-   <br>
-   <div class="w3-center w3-padding-24">
-    <input
-    class=" w3-white w3-border-teal w3-round-xlarge w3-padding-large" name="s" type="submit"
-     value="Submit"
- />
-=======
+
+ 
+
   <form action="#" class="w3-block" method="POST">
     <h1 class="w3-center"> Do You Want to Be an Educator ?</h1>
     <p class="w3-center"><b>Please fill this form </b></p>
@@ -118,7 +88,7 @@
       </select>
     </p>
 
-    <p> <label  class="w3-text-white" for="Subject"><b>Subject</b></label><br>
+    <p> <label  class="w3-text-white" for="Subject"><b>Course</b></label><br>
     <input class="w3-input w3-border w3-light-grey w3-round w3-validate " type="text" name="subject" placeholder="Course name">
     </p>
 
@@ -130,7 +100,7 @@
     <button type="submit"  name="submit" onclick="verify()" class="w3-btn w3-white  w3-border-white w3-round-xlarge w3-padding w3-block">
     Register </button>
 
->>>>>>> b35423d3cba7b68f1742a4ff3f66b7c5b38d2ca7
+
  </form>
 </div>
 <br>
