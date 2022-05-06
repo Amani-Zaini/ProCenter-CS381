@@ -1,5 +1,3 @@
-
-
 <header class="w3-container">
       <a href="index.php" class="w3-bar-item w3-button w3-left"
         ><img src="images/ProCenter-logo.png" class="logo" alt="ProCenter logo"
@@ -25,7 +23,7 @@
       <nav class="w3-navbar w3-text-grey w3-display-topmiddle w3-margin-top">
         <a
           href="index.php"
-          class="w3-bar-item w3-button w3-hover-none w3-text-pink w3-mobile"
+          class="w3-bar-item w3-button w3-hover-none w3-hover-text-pink w3-mobile"
           >Home</a
         >
         <div class="w3-dropdown-hover w3-mobile">
