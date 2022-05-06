@@ -66,8 +66,7 @@
    <br>
    <div class="w3-center w3-padding-24">
     <input
-    class=" w3-white w3-border-teal w3-round-xlarge w3-padding-large"
-      type="submit"
+    class=" w3-white w3-border-teal w3-round-xlarge w3-padding-large" name="s" type="submit"
      value="Submit"
  />
  </form>

@@ -64,10 +64,12 @@
             echo "<script>alert('Appointment is not added');</script>";
           }
      }
+     include "LoginDB.php";
     ?>
+  
       <form method="post" action="">
       <td></td>
-      <td><input type="number" id="stuID" name="stuID"></td>
+      <td><input type="text" id="stuID" name="stuID" value=<?php echo $_SESSION['college_id'];?> disabled></td>
       <td>
       
       <?php
@@ -77,8 +79,8 @@
         $result1 = mysqli_query($conn, $query);
       ?>
       
-      <select name="eduName">
-      <option value="" disabled selected hidden><b>Select educator</b> </option>
+      <select name="eduName" required>
+      <option value="" disabled selected hidden ><b>Select educator</b> </option>
         <?php while($row1 = mysqli_fetch_array($result1)):;?>
         <option  value="<?php echo $row1[1];?>"><?php echo $row1[1];?></option>
         <?php endwhile;?>
@@ -92,7 +94,7 @@
         $result1 = mysqli_query($conn, $query);
       ?>
       <td>
-      <select name="course">
+      <select name="course" required>
       <option value="" disabled selected hidden><b>Select course</b> </option>
         <?php while($row2 = mysqli_fetch_array($result1)):;?>
         <option  value="<?php echo $row2[2];?>"><?php echo $row2[2];?></option>
@@ -107,22 +109,24 @@
         $result1 = mysqli_query($conn, $query);
       ?>
       <td>
-      <select name="date">
+      <select name="date" required>
       <option value="" disabled selected hidden><b>Select date</b> </option>
         <?php while($row3 = mysqli_fetch_array($result1)):;?>
         <option  value="<?php echo $row3[3];?>"><?php echo $row3[3];?></option>
         <?php endwhile;?>
       </select>
     </td>
+
+    
     <?php
-        // php select option value from database
+        //php select option value from database
         include 'dbCon.php';
         $query="select * from eduinformation"; // Fetch all the data 
         $result1 = mysqli_query($conn, $query);
       ?>
-
+        
     <td>
-      <select name="time">
+      <select name="time" required>
       <option value="" disabled selected hidden><b>Select time</b> </option>
         <?php while($row4 = mysqli_fetch_array($result1)):;?>
         <option  value="<?php echo $row4[4];?>"><?php echo $row4[4];?></option>

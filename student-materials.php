@@ -35,7 +35,8 @@
 </tr>
 </thead>
 <tbody>
-  <?php foreach ($files as $file): ?>
+  
+  <?php foreach ($files as $file):?>
     <tr>
       <td><?php echo $file['no']; ?></td>
       <td><?php echo $file['name']; ?></td>

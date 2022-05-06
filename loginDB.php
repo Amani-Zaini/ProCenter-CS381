@@ -1,5 +1,8 @@
 <?php
-session_start(); //start the session
+ if(!isset($_SESSION)) 
+ { 
+     session_start(); 
+ }  //start the session
 include_once("dbCon.php");
 if(isset($_POST['sub']))//check wheather the user click on log in button
 {   
