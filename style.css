@@ -264,3 +264,6 @@ td {
   border: 1px solid black;
 }
 /*----------------download-------------------*/
+.maxWidth{
+  width: 556rem !important;
+}

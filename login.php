@@ -18,8 +18,6 @@
 
   </div>
 <!-- end of the website -->
-
-
 <!------------------------------------------------Start log in form--------------------------------------------->
 
 <div class="w3-container w3-display-topmiddle w3-padding-large" > <h1>
@@ -42,7 +40,7 @@
       <div class="w3-row w3-section">
           <div class="w3-col logo-width" ><i class="w3-xlarge fa fa-lock w3-text-teal"></i></div>
             <div class="w3-rest">
-              <input class="w3-input w3-border " name="password" type="text" placeholder="Password">
+              <input class="w3-input w3-border " name="password" type="password" placeholder="Password">
             </div>
         </div>      
       <div class=" w3-padding-16"> 

@@ -34,7 +34,30 @@
       <img src="images/Contact us.svg"  alt="contact us image" >
    </div>
 <!------------------------------------------------Start contact us form--------------------------------------------->
-  <form action="#" class=" margin-form-2-green w3-round-large w3-half w3-display-right w3-container w3-card-4 w3-text-white ">
+ <?php 
+ include 'dbCon.php';  
+ $query = "select * from contact";  
+ mysqli_query($conn,$query); 
+ if(isset($_POST['submit']))
+ {
+     $fname=$_POST['first'];
+     $lname=$_POST['last'];
+     $id=$_POST['id'];
+     $subject=$_POST['subject'];
+     $message=$_POST['message'];
+     $sql="insert into contact(fname,lname,id,subject,message) values('$fname','$lname','$id','$subject','$message')";
+     if( mysqli_query($conn,$sql)){
+       echo "<script>alert('Your message has been sent.');</script>";
+      }
+      else
+      {
+        echo "<script>alert('Could not send the message!');</script>";
+      }
+     
+ }
+?>
+  <form action="" class=" margin-form-2-green w3-round-large w3-half w3-display-right w3-container w3-card-4 w3-text-white " method="post">
+  
     <h1 class="w3-center">Contact Us</h1>
      <hr>
     <div>
@@ -61,7 +84,7 @@
     <div class="w3-row w3-section">
       <div class="w3-col logo-width"><i class="fa fa-lightbulb-o w3-xlarge" ></i></div>
         <div class="w3-rest">
-          <input class="w3-input w3-border" name="phone" type="text" placeholder="Subject">
+          <input class="w3-input w3-border" name="subject" type="text" placeholder="Subject">
         </div>
     </div>
     
@@ -71,20 +94,14 @@
           <input class="give-height w3-input w3-border" name="message" type="text" placeholder="Write comment...">
         </div>
     </div>
+
+    <td><button type="submit"  name="submit" class="w3-white w3-border-teal w3-round-xlarge w3-padding w3-block">
+      Send </button>
+      </td>
     
-    <div class="w3-center w3-padding-24">
-      <input
-      class=" w3-white w3-border-teal w3-round-xlarge w3-padding"
-        type="submit"
-       value="Send"
-    />
-    </div>
     </form>
-    <br>
     
-
-
-  
+    <br>
   <!--------------------------------Start the footer--------------------------------->
   <footer class="w3-teal">
     <div class="w3-container">

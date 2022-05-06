@@ -26,14 +26,15 @@
         
         <a
           href="requests.php"
-          class="w3-bar-item w3-button w3-hover-none w3-text-pink w3-mobile"
+          class="w3-bar-item w3-button w3-hover-none w3-hover-text-pink w3-mobile"
           >Student Request</a
         >
         </div>
+        
         <a
-          href="about.php"
+          href="contact_admin.php"
           class="w3-bar-item w3-button w3-hover-white w3-hover-text-pink w3-padding-32"
-          >About</a
+          >contact</a
         >
        
       </nav>
