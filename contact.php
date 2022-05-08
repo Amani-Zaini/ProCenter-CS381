@@ -63,35 +63,35 @@
     <div>
       <div class="w3-col logo-width" ><i class="w3-xlarge fa fa-user"></i></div>
         <div class="w3-rest">
-          <input class="w3-input w3-border" name="first" type="text" placeholder="First Name">
+          <input class="w3-input w3-border" name="first" type="text" placeholder="First Name" required>
         </div>
     </div>
     
     <div class="w3-row w3-section">
       <div class="w3-col logo-width" ><i class="w3-xlarge fa fa-user"></i></div>
         <div class="w3-rest">
-          <input class="w3-input w3-border" name="last" type="text" placeholder="Last Name">
+          <input class="w3-input w3-border" name="last" type="text" placeholder="Last Name" required>
         </div>
     </div>
     
     <div class="w3-row w3-section">
       <div class="w3-col logo-width" ><i class="fa fa-id-badge w3-xlarge" ></i></div>
         <div class="w3-rest">
-          <input class="w3-input w3-border" name="id" type="text" placeholder="ID">
+          <input class="w3-input w3-border" name="id" type="text" placeholder="ID" required>
         </div>
     </div>
     
     <div class="w3-row w3-section">
       <div class="w3-col logo-width"><i class="fa fa-lightbulb-o w3-xlarge" ></i></div>
         <div class="w3-rest">
-          <input class="w3-input w3-border" name="subject" type="text" placeholder="Subject">
+          <input class="w3-input w3-border" name="subject" type="text" placeholder="Subject" required>
         </div>
     </div>
     
     <div class="w3-row w3-section">
       <div class="w3-col logo-width"><i class="w3-xlarge fa fa-pencil"></i></div>
         <div class="w3-rest">
-          <input class="give-height w3-input w3-border" name="message" type="text" placeholder="Write comment...">
+          <input class="give-height w3-input w3-border" name="message" type="text" placeholder="Write comment..." required>
         </div>
     </div>
 
