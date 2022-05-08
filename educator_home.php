@@ -44,12 +44,7 @@
             programming center!
           </p>
           <br />
-          <button id="find-edu" onclick="redirectFindEdu()" class="w3-teal w3-border w3-round-xlarge w3-padding">
-            Find an Educator
-          </button>   
-          <button id="be-edu" onclick="redirectBeEdu()" class="w3-white w3-border w3-round-xlarge w3-padding">
-            Be an Educator
-          </button>
+       
         </div>
         <div class="w3-rest  w3-mobile">
           <img
@@ -108,94 +103,6 @@
     <br><br><br>
     <!-- ---------------------------------------------- End of website info  part------------------------------------------------------   -->
 
-    <!--  ---------------------------------------------- Educator card part------------------------------------------------------ -->
-    
-    <section class="section-margin ">
-      <div class="w3-container w3-center">
-        <h1>Our Educators</h1>
-      </div>
-      <div class="Card-Container  ">
-        <div class="w3-row marg-container">
-          <div class="w3-col s4 w3-card-2 w3-center w3-mobile marg-between w3-hover-shadow">
-            <header class="w3-container w3-pale-red w3-block">
-              <h4 class="w3-padding-4 w3-larg">Ms.siti Haris</h4>
-            </header>
-
-            <div class="w3-container w3-center">
-              <p>I will assist you with the c/c++ language</p>
-              <hr />
-              <ul>
-                <li class="w3-button w3-hover-none w3-round-xlarge w3-pale-red">
-                  c
-                </li>
-                <li class="w3-button w3-hover-none w3-round-xlarge w3-pale-red">
-                  C++
-                </li>
-                <li class="w3-button w3-hover-none w3-round-xlarge w3-pale-red">
-                  c#
-                </li>
-              </ul>
-            </div>
-            <button class="w3-button w3-hover-teal w3-block w3-pale-red" onclick="redirectStuAppointment()">
-              Book an Appointment
-            </button>
-          </div>
-
-          <div class="w3-col s4 w3-card-2 w3-center w3-mobile marg-between w3-hover-shadow">
-            <header class="w3-container w3-pale-red w3-block">
-              <h4 class="w3-padding-4 w3-larg">Ms.Ruba Darwish</h4>
-            </header>
-
-            <div class="w3-container w3-center">
-              <p>I will assist you with the web development project</p>
-              <hr />
-              <ul>
-                <li class="w3-button w3-hover-none w3-round-xlarge w3-pale-red">
-                  HTML
-                </li>
-                <li class="w3-button w3-hover-none w3-round-xlarge w3-pale-red">
-                  CSS
-                </li>
-                <li class="w3-button w3-hover-none w3-round-xlarge w3-pale-red">
-                  JS
-                </li>
-              </ul>
-            </div>
-            <button class="w3-button w3-hover-teal w3-block w3-pale-red" onclick="redirectStuAppointment()">
-              Book an Appointment
-            </button>
-          </div>
-
-          <div class="w3-col s4 w3-card-2 w3-center w3-mobile marg-between w3-hover-shadow">
-            <header class="w3-container w3-pale-red w3-block">
-              <h4 class="w3-padding-4 w3-larg">Dr. kajal Khan</h4>
-            </header>
-
-            <div class="w3-container w3-center">
-              <p>I will assist you with the JavaScript</p>
-              <hr />
-              <ul>
-                <li class="w3-button w3-hover-none w3-round-xlarge w3-pale-red">
-                  JS
-                </li>
-              </ul>
-            </div>
-            <button class="w3-button w3-hover-teal w3-block w3-pale-red" onclick="redirectStuAppointment()">
-              Book an Appointment
-            </button>
-          </div>
-        </div>
-      </div>
-      <!-- -------------------------more button part------------------- -->
-      <div class="w3-container w3-margin">
-        <button onclick="redirectFindEdu()" class="w3-white w3-border w3-round-xxlarge w3-padding">
-          More<span>&#8594;</span>
-        </button>
-      </div>
-    </section>
-    <!-- -------------------------more button part------------------- -->
-
-    <!--  ---------------------------------------------- End of Educator card part------------------------------------------------------ -->
 
     <!--  ------------------------------------------------ footet part part------------------------------------------------------ -->
     <footer class="w3-teal">

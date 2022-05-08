@@ -1,5 +1,3 @@
-
-
 <header class="w3-container">
       <a href="index.php" class="w3-bar-item w3-button w3-left"
         ><img src="images/ProCenter-logo.png" class="logo" alt="ProCenter logo"

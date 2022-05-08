@@ -1,3 +1,10 @@
+<head>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />  
+<head> 
 <header class="w3-container">
       <a href="index.php" class="w3-bar-item w3-button w3-left"
         ><img src="images/ProCenter-logo.png" class="logo" alt="ProCenter logo"
@@ -22,20 +29,12 @@
       </div>
       <nav class="w3-navbar w3-text-grey w3-display-topmiddle w3-margin-top">
         <a
-          href="index.php"
-
+          href="educator_home.php"
           class="w3-bar-item w3-button w3-hover-white w3-hover-text-pink w3-mobile"
-
           class="w3-bar-item w3-button w3-hover-none w3-hover-text-pink w3-mobile"
-
           >Home</a
         >
-        <div class="w3-dropdown-hover w3-mobile">
-          <button
-            class="w3-button w3-hover-none w3-hover-text-pink w3-padding-16"
-          >
-           
-        </div>
+       
         <div class="w3-dropdown-hover w3-mobile">
           <button class="w3-button w3-hover-text-pink w3-padding-16 w3-hover-none">
             Appointment <i class="fa fa-caret-down"></i>

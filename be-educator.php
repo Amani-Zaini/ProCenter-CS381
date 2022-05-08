@@ -67,15 +67,15 @@
     <hr>
 
     <p> <label class="w3-text-white w3-label" for="FN"><b>First name</b></label>
-    <input class="w3-input w3-padding  w3-border w3-light-grey  w3-round w3-validate"  type="text" name="FN" placeholder="First name">
+    <input class="w3-input w3-padding  w3-border w3-light-grey  w3-round w3-validate"  type="text" name="FN" placeholder="First name" required>
     </p>
 
     <p> <label class="w3-text-white w3-label" for="LN"><b>Last name</b></label>
-    <input class=" w3-input w3-border w3-light-grey  w3-round w3-validate"  type="text" name="LN" placeholder="Last name">
+    <input class=" w3-input w3-border w3-light-grey  w3-round w3-validate"  type="text" name="LN" placeholder="Last name" required>
     </p>
 
     <p><label class="w3-text-white w3-label" for="ID"><b>Student ID</b></label>
-    <input class=" w3-input w3-border w3-light-grey  w3-round w3-validate" type="number" name="ID" placeholder="College ID">
+    <input class=" w3-input w3-border w3-light-grey  w3-round w3-validate" type="number" name="ID" placeholder="College ID" required>
     </p>
 
     <p><label class="w3-text-white w3-label" for="level"><b>Level</b></label>
@@ -89,11 +89,11 @@
     </p>
 
     <p> <label  class="w3-text-white" for="Subject"><b>Course</b></label><br>
-    <input class="w3-input w3-border w3-light-grey w3-round w3-validate " type="text" name="subject" placeholder="Course name">
+    <input class="w3-input w3-border w3-light-grey w3-round w3-validate " type="text" name="subject" placeholder="Course name" required>
     </p>
 
     <p><label class="w3-text-white" for="GPA"><b>GPA</b></label><br>
-    <input class=" w3-input w3-border w3-light-grey  w3-round " type="text" id="gpa" name="GPA" placeholder=" GPA">
+    <input class=" w3-input w3-border w3-light-grey  w3-round " type="text" id="gpa" name="GPA" placeholder=" GPA" required>
     </p>
 
     <br>

@@ -24,20 +24,15 @@
  <!-- ---------------------------------------------- End of header part------------------------------------------------------ -->
  
 <!-- ---------------------------------------------- Educator Schedule part------------------------------------------------------ -->
-<?php   
- include 'dbCon.php';  
- $query = "select * from StuSession WHERE `stuid`='$_SESSION[college_id]'";  
- $run = mysqli_query($conn,$query);  
- ?>
+
 <br>
 <div class="w3-container w3-padding-64 ">
-  <h2>Fill out the form to book new session</h2>
+  <h2>Choose Your Best Educator and book new session</h2>
   <div class="w3-responsive w3-center">
   <table class="w3-table-all ">
     <thead>
-      <tr class="w3-teal ">
+      <tr class="w3-teal  ">
         <th>#</th>
-        <th>student id</th>
         <th>educator Name</th>
         <th>course</th>
         <th>session Date</th>
@@ -46,118 +41,31 @@
       </tr>
     </thead>
     <tr>
-    <?php
-    
-     if(isset($_POST['submit']))
-     {
-         $stuID=$_POST['stuID'];
-         $eduName=$_POST['eduName'];
-         $course=$_POST['course'];
-         $date=$_POST['date'];
-         $time=$_POST['time'];
-         $sql="insert into StuSession(stuid,eduName,course,date,time) values('$stuID','$eduName','$course','$date','$time')";
-         if( mysqli_query($conn,$sql)){
-           echo "<script>alert('New appointment is added');</script>";
-          }
-          else
-          {
-            echo "<script>alert('Appointment is not added');</script>";
-          }
-     }
+    <?php 
      include "LoginDB.php";
     ?>
-  
-      <form method="post" action="">
-      <td></td>
-      <td><input type="text" id="stuID" name="stuID" value=<?php echo $_SESSION['college_id'];?> readonly></td>
-      <td>
-      
-      <?php
-        // php select option value from database
-        include 'dbCon.php';
-        $query="select * from eduinformation"; // Fetch all the data 
-        $result1 = mysqli_query($conn, $query);
-      ?>
-      
-      <select name="eduName" required>
-      <option value="" disabled selected hidden ><b>Select educator</b> </option>
-        <?php while($row1 = mysqli_fetch_array($result1)):;?>
-        <option  value="<?php echo $row1[1];?>"><?php echo $row1[1];?></option>
-        <?php endwhile;?>
-      </select></td>
-    
-      <?php
-        // php select option value from database
-        include 'dbCon.php';
-        $query="select * from eduinformation"; // Fetch all the data 
-        // for method 1
-        $result1 = mysqli_query($conn, $query);
-      ?>
-      <td>
-      <select name="course" required>
-      <option value="" disabled selected hidden><b>Select course</b> </option>
-        <?php while($row2 = mysqli_fetch_array($result1)):;?>
-        <option  value="<?php echo $row2[2];?>"><?php echo $row2[2];?></option>
-        <?php endwhile;?>
-      </select>
-    </td>
-    
-    <?php
-        // php select option value from database
-        include 'dbCon.php';
-        $query="select * from eduinformation"; // Fetch all the data 
-        $result1 = mysqli_query($conn, $query);
-      ?>
-      <td>
-      <select name="date" required>
-      <option value="" disabled selected hidden><b>Select date</b> </option>
-        <?php while($row3 = mysqli_fetch_array($result1)):;?>
-        <option  value="<?php echo $row3[3];?>"><?php echo $row3[3];?></option>
-        <?php endwhile;?>
-      </select>
-    </td>
-
-    
-    <?php
-        //php select option value from database
-        include 'dbCon.php';
-        $query="select * from eduinformation"; // Fetch all the data 
-        $result1 = mysqli_query($conn, $query);
-      ?>
-        
-    <td>
-      <select name="time" required>
-      <option value="" disabled selected hidden><b>Select time</b> </option>
-        <?php while($row4 = mysqli_fetch_array($result1)):;?>
-        <option  value="<?php echo $row4[4];?>"><?php echo $row4[4];?></option>
-        <?php endwhile;?>
-      </select>
-    </td>
-
-      <td><button type="submit"  name="submit" class="w3-teal w3-border-teal w3-round-xlarge w3-padding">
-      <i class="fa fa-plus  Edit-out-logo-size" ></i> Add new session </button>
-      </td>
-    </form>
-
-    </tr>
     <?php   
+    include 'dbCon.php';
+    $query="select * from eduschedule"; // Fetch all the data 
+    $result1 = mysqli_query($conn, $query);
+    
       $i=1;  
-           if ($num = mysqli_num_rows($run)>0) {  
-                while ($result = mysqli_fetch_assoc($run)) {  
-                     echo "  
-                          <tr class='data'>   
-                          <td>".$i++."</td>
-                          <td>".$result['stuid']."</td>
-                          <td>".$result['eduName']."</td> 
-                          <td>".$result['course']."</td>  
-                          <td>".$result['date']."</td>  
-                          <td>".$result['time']."</td> 
-                          <td><a href='db_stuDelete.php?stuid=".$result['app_no']."' class='w3-button w3-teal w3-border-teal w3-round-xlarge del'><i class='fa fa-close  Edit-out-logo-size' ></i> Cancel</a></td> 
-                          </tr>  
-                     ";  
-                }  
-           }  
-      ?>  
+      
+        while ($result = mysqli_fetch_assoc($result1)) {  
+             echo "  
+                  <tr class='data'>   
+                  <td>".$i++."</td>
+                  <td>".$result['edu_name']."</td> 
+                  <td>".$result['course']."</td>  
+                  <td>".$result['date']."</td>  
+                  <td>".$result['time']."</td> 
+                  <td><a href='db_book.php?stuid=".$_SESSION['college_id']."&edu_name=".$result['edu_name']."&course=".$result['course']."&date=".$result['date']."&time=".$result['time']."' class='w3-button w3-teal w3-border-teal w3-round-xlarge '> <i class='fa fa-plus  Edit-out-logo-size' ></i> Book New Session</a></td> 
+                  </tr>  
+             ";  
+        }
+                
+ ?>
+ 
     </table>
   </div>
 </div>

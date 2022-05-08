@@ -20,10 +20,14 @@ if(isset($_POST['sub']))//check wheather the user click on log in button
                 $_SESSION["name"]=$row['name'];
                 $_SESSION["user_type"]=$row['user_type']; 
               
-                    if( $_SESSION["user_type"] == 'student' || $_SESSION["user_type"] == 'educator' )
+                    if( $_SESSION["user_type"] == 'student')
                     {
                         header("location: index.php");
                     } 
+                    if( $_SESSION["user_type"] == 'educator')  
+                    {
+                        header("location: educator_home.php");
+                    }
                     if( $_SESSION["user_type"] == 'admin')  
                     {
                         header("location: requests.php");

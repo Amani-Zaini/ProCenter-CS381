@@ -41,7 +41,7 @@
 
           <?php
             include 'dbCon.php';
-            $query="select * from EduInformation"; // Fetch all the data from the table customers
+            $query="select * from eduschedule"; // Fetch all the data from the table customers
             $result=mysqli_query($conn,$query);
             ?>
             <?php if ($result->num_rows > 0): ?>
