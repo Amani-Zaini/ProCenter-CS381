@@ -40,16 +40,16 @@
     <tbody>
   <?php
   include 'dbCon.php';
-  $query="select * from StuSession"; // Fetch all the data from the table
+  $query="select * from StuSession where `eduName`='$_SESSION[name]'"; // Fetch all the data from the table
   $result=mysqli_query($conn,$query);
   ?>
   <?php if ($result->num_rows > 0): ?>
   <?php while($array=mysqli_fetch_row($result)): ?>
         <tr>
-            <th scope="row"><?php echo $array[0];?></th>
-            <td><?php echo $array[2];?></td>
+            <td scope="row"><?php echo $array[1];?></td>
             <td><?php echo $array[3];?></td>
             <td><?php echo $array[4];?></td>
+            <td><?php echo $array[5];?></td>
         </tr>
   <?php endwhile; ?>
   <?php else: ?>

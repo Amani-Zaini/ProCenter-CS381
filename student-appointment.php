@@ -44,10 +44,11 @@
   <?php if ($result->num_rows > 0): ?>
   <?php while($array=mysqli_fetch_row($result)): ?>
         <tr>
-            <th scope="row"><?php echo $array[1];?></th>
-            <td><?php echo $array[2];?></td>
+            <td scope="row"><?php echo $array[2];?></td>
             <td><?php echo $array[3];?></td>
             <td><?php echo $array[4];?></td>
+            <td><?php echo $array[5];?></td>
+            
             
         </tr>
   <?php endwhile; ?>

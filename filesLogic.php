@@ -1,8 +1,8 @@
 <?php
 // connect to the database
-include 'dbCon.php';
-$sql = "SELECT * FROM materials";
-$result = mysqli_query($conn, $sql);
+include 'loginDB.php';
+$s = "SELECT * FROM materials WHERE `id_user`='$_SESSION[college_id]'";
+$result = mysqli_query($conn, $s);
 
 $files = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
@@ -19,7 +19,7 @@ if (isset($_POST['save'])) { // if save button on the form is clicked
         if(move_uploaded_file($_FILES["myfile"]["tmp_name"][$i],'uploads/'.$filename)){
 
                 // Image db insert sql
-                $insert = "INSERT into materials (name, size, downloads) VALUES ('$filename',now(),1)";
+                $insert = "INSERT into materials (id_user,name, size, downloads) VALUES ('$_SESSION[college_id]','$filename',now(),1)";
                 if(mysqli_query($conn, $insert)){
                     echo 'Data inserted successfully';
                     }
@@ -38,8 +38,8 @@ if (isset($_GET['file_id'])) {
     $id = $_GET['file_id'];
 
     // fetch file to download from database
-    $sql = "SELECT * FROM materials WHERE id=$id";
-    $result = mysqli_query($conn, $sql);
+    $sq = "SELECT * FROM materials WHERE id=$id";
+    $result = mysqli_query($conn, $sq);
 
     $file = mysqli_fetch_assoc($result);
     $filepath = 'uploads/' . $file['name'];
@@ -56,7 +56,7 @@ if (isset($_GET['file_id'])) {
 
         // Now update downloads count
         $newCount = $file['downloads'] + 1;
-        $updateQuery = "UPDATE materials SET downloads=$newCount WHERE id=$id";
+        $updateQuery = "UPDATE materials SET downloads=$newCount WHERE id=$id";//what is the id
         mysqli_query($conn, $updateQuery);
         exit;
     }

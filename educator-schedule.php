@@ -1,6 +1,6 @@
 <?php   
- include 'dbCon.php';  
- $query = "select * from eduschedule";  
+ include 'loginDB.php';  
+ $query = "select * from eduschedule WHERE `edu_name`='$_SESSION[name]'";  
  $run = mysqli_query($conn,$query);  
  ?> 
 <html>
@@ -14,7 +14,7 @@
 <body>
 
  <!-- ----------------------------------------------------header part------------------------------------------------------ -->
- <<?php include("loginDB.php");
+ <?php include("loginDB.php");
     if( $_SESSION["user_type"] == 'student') {
          include ("student_header.php");
       } 
@@ -38,7 +38,7 @@
   <table class="w3-table-all ">
     <thead>
       <tr class="w3-teal ">
-        <th>Appointment #</th>
+        
         <th>Course</th>
         <th>Appointment Date</th>
         <th>Available Time</th>
@@ -49,13 +49,14 @@
     <tr>
       
     <?php
+    
      if(isset($_POST['submit']))
      {
-         $id=$_POST['id'];
+       
          $course=$_POST['course'];
          $date=$_POST['date'];
          $time=$_POST['time'];
-         $sql="insert into eduschedule(id,course,date,time) values('$id','$course','$date','$time')";
+         $sql="insert into eduschedule(edu_name,course,date,time) values('$_SESSION[name]','$course','$date','$time')";
          if( mysqli_query($conn,$sql)){
            echo "<script>alert('New appointment is added');</script>";
           }
@@ -66,7 +67,6 @@
      }
     ?>
       <form method="post" action="">
-      <td><input type="number" id="id" name="id" ></td>
       <td><input type="text" id="course" name="course" ></td>
       <td><input type="date" id="date" name="date"  ></td>
       <td><input type="time" id="time" name="time"  ></td>
@@ -81,7 +81,6 @@
                 while ($result = mysqli_fetch_assoc($run)) {  
                      echo "  
                           <tr class='data'>   
-                          <td>".$result['id']."</td>  
                           <td>".$result['course']."</td>  
                           <td>".$result['date']."</td>  
                           <td>".$result['time']."</td> 

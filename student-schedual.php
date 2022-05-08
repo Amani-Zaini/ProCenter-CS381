@@ -26,7 +26,7 @@
 <!-- ---------------------------------------------- Educator Schedule part------------------------------------------------------ -->
 <?php   
  include 'dbCon.php';  
- $query = "select * from StuSession";  
+ $query = "select * from StuSession WHERE `stuid`='$_SESSION[college_id]'";  
  $run = mysqli_query($conn,$query);  
  ?>
 <br>
@@ -152,7 +152,7 @@
                           <td>".$result['course']."</td>  
                           <td>".$result['date']."</td>  
                           <td>".$result['time']."</td> 
-                          <td><a href='db_stuDelete.php?stuid=".$result['stuid']."' class='w3-button w3-teal w3-border-teal w3-round-xlarge del'><i class='fa fa-close  Edit-out-logo-size' ></i> Cancel</a></td> 
+                          <td><a href='db_stuDelete.php?stuid=".$result['app_no']."' class='w3-button w3-teal w3-border-teal w3-round-xlarge del'><i class='fa fa-close  Edit-out-logo-size' ></i> Cancel</a></td> 
                           </tr>  
                      ";  
                 }  
