@@ -10,7 +10,7 @@
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <title>CSE ProCenter </title>
   </head>
-  <script src="main.js"></script>
+  <script src="redirect.js"></script>
   <body>
   <?php 
     session_start();
