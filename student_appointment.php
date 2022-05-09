@@ -37,31 +37,37 @@
         <th>course</th>
         <th>Date</th>
         <th>Time</th>
+        <th>Action</th>
       </tr>
     </thead>
     <tbody>
   <?php
   include 'db_con.php';
   $query="select * from `StuSession` WHERE `stuid`='$_SESSION[college_id]'"; // Fetch all the data from the table 
-  $result=mysqli_query($conn,$query);
+  $result1 = mysqli_query($conn, $query);
   ?>
-  <?php if ($result->num_rows > 0): ?>
-  <?php while($array=mysqli_fetch_row($result)): ?>
-        <tr>
-            <td scope="row"><?php echo $array[2];?></td>
-            <td><?php echo $array[3];?></td>
-            <td><?php echo $array[4];?></td>
-            <td><?php echo $array[5];?></td>
-            
-            
-        </tr>
-  <?php endwhile; ?>
+  <?php if (mysqli_num_rows($result1) > 0): ?>
+  <?php  while ($result = mysqli_fetch_assoc($result1)) {
+    
+      echo "  
+           <tr class='data'>   
+           <td>".$result['eduName']."</td> 
+           <td>".$result['course']."</td>  
+           <td>".$result['date']."</td>  
+           <td>".$result['time']."</td> 
+           <td><a href='db_studelete.php?stuid=".$_SESSION['college_id']."&date=".$result['date']."&time=".$result['time']."' class='w3-button w3-teal w3-border-teal w3-round-xlarge'><i class='fa fa-close  Edit-out-logo-size' ></i> Cancel</a></td> 
+           </tr>  
+      ";  
+     
+ }
+      
+   ?>
   <?php else: ?>
         <tr>
-        <td colspan="4" rowspan="1" headers="" class="w3-center">No Appointment is Found</td>
+        <td colspan="5" rowspan="1" headers="" class="w3-center">No Appointment is Found</td>
         </tr>
   <?php endif; ?>
-  <?php mysqli_free_result($result); ?>
+  <?php mysqli_free_result($result1); ?>
     </tbody>
   </table>
 </div>
