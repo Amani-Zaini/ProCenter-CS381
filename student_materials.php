@@ -8,7 +8,7 @@
 
 <body>
 <?php 
-   
+   //session_start();
     if (!isset($_SESSION['college_id']))
     header("Location: login.php");
    ?>
@@ -42,7 +42,9 @@
 </thead>
 <tbody>
   
-  <?php foreach ($f as $file):?>
+  <?php 
+  if ($result2->num_rows > 0): 
+  foreach ($f as $file):?>
     <tr>
     <td><?php echo $file['edu_name']; ?></td>
       <td><?php echo $file['name']; ?></td>
@@ -51,7 +53,12 @@
       <td><a href="student_materials.php?file_id=<?php echo $file['no'] ?>">Download</a></td>
     </tr>
   <?php endforeach;?>
-
+  <?php else: ?>
+        <tr>
+        <td colspan="5" rowspan="1" headers="" class="w3-center">No materials is Found</td>
+        </tr>
+  <?php endif; ?>
+  <?php mysqli_free_result($result2); ?>
 </tbody>
 </table>
 </div>
