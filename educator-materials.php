@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="style.css">
-
+<script src="main.js"></script>
 <body>
 <!-- ----------------------------------------------------header part------------------------------------------------------ -->
 <?php include("loginDB.php");
@@ -31,7 +31,7 @@
 <table class = "w3-table-all w3-hoverable">
 <thead>
     <tr class="w3-teal">
-    <th>No.</th>
+    <th>Student ID</th>
     <th>Filename</th>
     <th>size (in mb)</th>
     <th>Downloads</th>
@@ -41,7 +41,7 @@
 <tbody>
   <?php foreach ($files as $file): ?>
     <tr>
-      <td><?php echo $file['no']; ?></td>
+      <td><?php echo $file['stu_id']; ?></td>
       <td><?php echo $file['name']; ?></td>
       <td><?php echo floor($file['size'] / 1000) . ' KB'; ?></td>
       <td><?php echo $file['downloads']; ?></td>
@@ -54,8 +54,21 @@
 </table>
 <div class="row">
         <form action="#" method="post" enctype="multipart/form-data" >
-          <h3>Upload File</h3>
-          <input type="file" name="myfile[]" id="file" multiple> <br>
+       
+        Upload File <input type="file" name="myfile[]" id="file" multiple required> <br> 
+        
+      <?php
+        
+        $query="SELECT * FROM `login` WHERE user_type='student'";
+        $result1 = mysqli_query($conn, $query);
+      ?>
+      Student ID <select name="student" class="w3-input" required>
+      <option value="" disabled selected hidden>Select </option>
+        <?php while($row2 = mysqli_fetch_array($result1)):;?>
+        <option  value="<?php echo $row2[0];?>"><?php echo $row2[0];?></option>
+        <?php endwhile;?>
+      </select>
+      <br>
           <button class="w3-button w3-teal w3-border w3-border-teal w3-round-large w3-hover-white" type="submit" name="save"> Upload Material</button>    
         </form>
       </div>

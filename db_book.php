@@ -10,7 +10,7 @@
       $query = "insert into StuSession(stuid,eduName,course,date,time) values('$id','$name','$course','$date','$time')"; 
       $run = mysqli_query($conn,$query);  
         if ($run) {  
-           header('location:student-appointment.php'); 
+           header('location:student_schedual.php'); 
            //header('Refresh: 10; URL=student-appointment.php'); for future ehe
         }
       else{  

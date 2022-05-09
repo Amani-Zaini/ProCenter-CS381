@@ -228,7 +228,7 @@ footer {
   margin-top: 40px;
   margin-right: 50px;
 }
-/*----------------log in-------------------*/
+
 
 /*----------------upload-------------------*/
 form {
@@ -249,7 +249,7 @@ button {
   border-radius: 5px;
 
 }
-/*----------------upload-------------------*/
+
 
 /*----------------download-------------------*/
 table {
@@ -263,7 +263,7 @@ td {
   vertical-align: center;
   border: 1px solid black;
 }
-/*----------------download-------------------*/
+
 .maxWidth{
   width: 556rem !important;
 }

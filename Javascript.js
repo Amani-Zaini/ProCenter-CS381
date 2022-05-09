@@ -5,3 +5,4 @@ function redirectCreateSch(){
 function redirectViewApp(){
   window.location  = "educator-appointment.php";
 }
+

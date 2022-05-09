@@ -28,19 +28,21 @@
 <table class =  "w3-table-all w3-hoverable">
 <thead>
     <tr class="w3-teal">
-    <th>No.</th>
+    <th>Educator name</th>
     <th>Filename</th>
     <th>size (in mb)</th>
+    <th>Download no</th>
     <th>Action</th>
 </tr>
 </thead>
 <tbody>
   
-  <?php foreach ($files as $file):?>
+  <?php foreach ($f as $file):?>
     <tr>
-      <td><?php echo $file['no']; ?></td>
+    <td><?php echo $file['edu_name']; ?></td>
       <td><?php echo $file['name']; ?></td>
       <td><?php echo floor($file['size'] / 1000) . ' KB'; ?></td>
+      <td><?php echo $file['downloads']; ?></td>
       <td><a href="student-materials.php?file_id=<?php echo $file['no'] ?>">Download</a></td>
     </tr>
   <?php endforeach;?>

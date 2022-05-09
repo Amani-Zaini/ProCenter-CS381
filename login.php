@@ -45,7 +45,7 @@
         </div>      
       <div class=" w3-padding-16"> 
         <input class=" w3-center w3-round-large w3-padding-large w3-teal w3-input w3-hover-shadow" name="sub" type="submit" value="Log in">
-        <a href="#" class="w3-button w3-hover-none ">Forget password?</a>
+       
       </div>
       </form>
 

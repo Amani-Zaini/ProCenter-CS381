@@ -15,11 +15,7 @@
           <img src="images/profile.png" alt="profile logo" class="icons" />
         </button>
         <div class="w3-dropdown-content w3-bar-block  w3-teal progile-right">
-          <a
-            href="profile.php"
-            class="w3-bar-item w3-button w3-mobile  w3-hover-light-grey w3-hover-text-pink"
-            ><i class="fa fa-edit w3-margin-right Edit-out-logo-size" ></i>Edit Profile</a
-          >
+          
           <a
             href="logOut.php?logout"
             class="w3-bar-item w3-button  w3-mobile w3-hover-light-grey w3-hover-text-pink"
