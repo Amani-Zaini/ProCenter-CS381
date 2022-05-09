@@ -36,13 +36,13 @@ include "login_db.php";
       <div class="w3-row w3-section">
         <div class="w3-col logo-width" ><i class="fa fa-user w3-xlarge w3-text-teal" ></i></div>
           <div class="w3-rest">
-            <input class="w3-input w3-border" name="college_id" type="text" placeholder="User name">
+            <input class="w3-input w3-border" name="college_id" type="text" placeholder="User name" required>
           </div>
       </div>
       <div class="w3-row w3-section">
           <div class="w3-col logo-width" ><i class="w3-xlarge fa fa-lock w3-text-teal"></i></div>
             <div class="w3-rest">
-              <input class="w3-input w3-border " name="password" type="password" placeholder="Password">
+              <input class="w3-input w3-border " name="password" type="password" placeholder="Password" required>
             </div>
         </div>      
       <div class=" w3-padding-16"> 
