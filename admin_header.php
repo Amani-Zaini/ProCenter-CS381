@@ -14,7 +14,7 @@
             ><i class="fa fa-edit w3-margin-right Edit-out-logo-size" ></i>Edit Profile</a
           >
           <a
-            href="logOut.php?logout"
+            href="logout.php?logout"
             class="w3-bar-item w3-button  w3-mobile w3-hover-light-grey w3-hover-text-pink"
             ><i class="fa fa-sign-out w3-margin-right Edit-out-logo-size" ></i>Log out</a
           >

@@ -11,7 +11,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />    
-    <script src="main.js"></script>
+    <script src="redirect.js"></script>
   </head>
   <body>
    <?php 
@@ -48,10 +48,10 @@
             programming center!
           </p>
           <br />
-          <button id="find-edu" onclick="redirectFindEdu()" class="w3-teal w3-border w3-round-xlarge w3-padding">
+          <button  onclick="redirectFindEdu()" class="w3-teal w3-border w3-round-xlarge w3-padding">
             Find an Educator
           </button>   
-          <button id="be-edu" onclick="redirectBeEdu()" class="w3-white w3-border w3-round-xlarge w3-padding">
+          <button  onclick="redirectBeEdu()" class="w3-white w3-border w3-round-xlarge w3-padding">
             Be an Educator
           </button>
         </div>
