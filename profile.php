@@ -59,9 +59,9 @@
                   <p>
                     <label class="w3-text-white"><b><?php echo $_SESSION['user_type'];?> Name</b></label>
                     <?php //$userName=$_SESSION['name'];
-                    include "dbCon.php";
-                    $sql="SELECT name, password, FROM login WHERE college_id = '" . $_SESSION['college_id']."'"; 
-                    mysqli_query($conn, $sql);
+                    // include "dbCon.php";
+                    // $sql="SELECT name, password, FROM login WHERE college_id = '" . $_SESSION['college_id']."'"; 
+                    // mysqli_query($conn, $sql);
                     ?>
                     <input class="w3-input w3-border w3-round" name="name" type="text" value=<?php echo $_SESSION['name'];?>  />
                   </p>
