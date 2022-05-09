@@ -9,9 +9,11 @@
       $time = $_GET['time']; 
       $query = "insert into StuSession(stuid,eduName,course,date,time) values('$id','$name','$course','$date','$time')"; 
       $run = mysqli_query($conn,$query);  
-        if ($run) {  
-           header('location:student_appointment.php'); 
-           //header('Refresh: 10; URL=student_appointment.php'); for future ehe
+      if ($run) {  
+         echo "
+         <script> 
+         alert('new appoitnment is added');
+         window.location.href='student_schedule.php'; </script>";
         }
       else{  
            echo "Error: ".mysqli_error($conn);  
