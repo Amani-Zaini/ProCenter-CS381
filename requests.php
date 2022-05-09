@@ -7,8 +7,13 @@
   <link  rel="stylesheet" href="style.css">
 </head>
 <body>
+<?php 
+    session_start();
+    if (!isset($_SESSION['college_id']))
+    header("Location: login.php");
+   ?>
   <!-- ----------------------------------------------------header part------------------------------------------------------ -->
-  <?php include("loginDB.php");
+  <?php include("login_db.php");
     if( $_SESSION["user_type"] == 'student') {
          include ("student_header.php");
       } 
@@ -41,7 +46,7 @@
         <?php
    
 
-        include "dbCon.php";
+        include "db_con.php";
         $query="select * from Requests"; // Fetch all the data 
         $run = mysqli_query($conn, $query);
         $query = "SELECT * FROM Requests ";

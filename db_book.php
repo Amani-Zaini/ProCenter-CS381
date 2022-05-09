@@ -1,6 +1,6 @@
 <?php   
 
- include 'dbCon.php';  
+ include 'db_con.php';  
  if (isset($_GET['stuid'])) {  
       $id = $_GET['stuid']; 
       $name = $_GET['edu_name'];
@@ -10,8 +10,13 @@
       $query = "insert into StuSession(stuid,eduName,course,date,time) values('$id','$name','$course','$date','$time')"; 
       $run = mysqli_query($conn,$query);  
         if ($run) {  
-           header('location:student_schedual.php'); 
-           //header('Refresh: 10; URL=student-appointment.php'); for future ehe
+
+           
+           echo "<script> 
+         alert('new appoitnment is added');
+         window.location.href='student_schedule.php'; </script>";
+           //header('Refresh: 5; URL=student_schedule.php.php'); for future ehe
+
         }
       else{  
            echo "Error: ".mysqli_error($conn);  

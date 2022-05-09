@@ -1,11 +1,9 @@
 
-  <head>
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />  
-  <head>  
+    />   
 <header class="w3-container">
       <a href="index.php" class="w3-bar-item w3-button w3-left"
         ><img src="images/ProCenter-logo.png" class="logo" alt="ProCenter logo"
@@ -18,7 +16,7 @@
         <div class="w3-dropdown-content w3-bar-block  w3-teal progile-right">
          
           <a
-            href="logOut.php?logout"
+            href="logout.php?logout"
             class="w3-bar-item w3-button  w3-mobile w3-hover-light-grey w3-hover-text-pink"
             ><i class="fa fa-sign-out w3-margin-right Edit-out-logo-size" ></i>Log out</a
           >
@@ -42,12 +40,12 @@
           </button>
           <div class="w3-dropdown-content w3-bar-block w3-teal">
             <a
-              href="find-educator.php"
+              href="find_educator.php"
               class="w3-bar-item w3-button w3-mobile w3-hover-light-grey w3-hover-text-pink"
               >Find an Educator</a
             >
             <a
-              href="be-educator.php"
+              href="be_educator.php"
               class="w3-bar-item w3-button w3-mobile w3-hover-light-grey w3-hover-text-pink"
               >Be an Educator</a
             >
@@ -59,12 +57,13 @@
           </button>
           <div class="w3-dropdown-content  w3-bar-block w3-teal">
             <a
-              href="student-appointment.php"
+              href="student_appointment.php"
               class="w3-bar-item w3-button w3-mobile w3-hover-light-grey w3-hover-text-pink"
               >My Appointment</a
             >
             <a
-            href="student-materials.php"
+            href="student_materials.php"
+
             class="w3-bar-item w3-button w3-mobile w3-hover-light-grey w3-hover-text-pink"
             >My Materials</a
           >

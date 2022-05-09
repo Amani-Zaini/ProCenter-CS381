@@ -1,17 +1,18 @@
 <html>
-<title>Student-My Appointment</title>
+<title>Educator Schedule</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css">
+
 <body>
 <?php 
     session_start();
     if (!isset($_SESSION['college_id']))
     header("Location: login.php");
    ?>
-  <!-- ----------------------------------------------------header part------------------------------------------------------ -->
-  <?php include("loginDB.php");
+ <!-- ----------------------------------------------------header part------------------------------------------------------ -->
+ <?php include("login_db.php");
     if( $_SESSION["user_type"] == 'student') {
          include ("student_header.php");
       } 
@@ -25,51 +26,56 @@
     ?>
 
  <!-- ---------------------------------------------- End of header part------------------------------------------------------ -->
- <!-- ---------------------------------------------- Appointment part------------------------------------------------------ -->
- <div class="w3-panel w3-padding-64">
-  <h2>My Appointments</h2>
-  <div class="w3-responsive">
-  <table class="w3-table-all">
+ 
+<!-- ---------------------------------------------- Educator Schedule part------------------------------------------------------ -->
+
+<br>
+<div class="w3-container w3-padding-64 ">
+  <h2>Choose Your Best Educator and book new session</h2>
+  <div class="w3-responsive w3-center">
+  <table class="w3-table-all ">
     <thead>
-      <tr class="w3-teal">
-        
-        <th>Educator Name</th>
+      <tr class="w3-teal  ">
+        <th>#</th>
+        <th>educator Name</th>
         <th>course</th>
-        <th>Date</th>
-        <th>Time</th>
+        <th>session Date</th>
+        <th>session Time</th>
+        <th>Action</th>
       </tr>
     </thead>
-    <tbody>
-  <?php
-  include 'dbCon.php';
-  $query="select * from `StuSession` WHERE `stuid`='$_SESSION[college_id]'"; // Fetch all the data from the table 
-  $result=mysqli_query($conn,$query);
-  ?>
-  <?php if ($result->num_rows > 0): ?>
-  <?php while($array=mysqli_fetch_row($result)): ?>
-        <tr>
-            <td scope="row"><?php echo $array[2];?></td>
-            <td><?php echo $array[3];?></td>
-            <td><?php echo $array[4];?></td>
-            <td><?php echo $array[5];?></td>
-            
-            
-        </tr>
-  <?php endwhile; ?>
-  <?php else: ?>
-        <tr>
-        <td colspan="4" rowspan="1" headers="" class="w3-center">No Appointment is Found</td>
-        </tr>
-  <?php endif; ?>
-  <?php mysqli_free_result($result); ?>
-    </tbody>
-  </table>
-</div>
+    <tr>
+    <?php 
+     include "login_db.php";
+    ?>
+    <?php   
+    include 'db_con.php';
+    $query="select * from eduschedule"; // Fetch all the data 
+    $result1 = mysqli_query($conn, $query);
+    
+      $i=1;  
+      
+        while ($result = mysqli_fetch_assoc($result1)) {  
+             echo "  
+                  <tr class='data'>   
+                  <td>".$i++."</td>
+                  <td>".$result['edu_name']."</td> 
+                  <td>".$result['course']."</td>  
+                  <td>".$result['date']."</td>  
+                  <td>".$result['time']."</td> 
+                  <td><a href='db_book.php?stuid=".$_SESSION['college_id']."&edu_name=".$result['edu_name']."&course=".$result['course']."&date=".$result['date']."&time=".$result['time']."' class='w3-button w3-teal w3-border-teal w3-round-xlarge '> <i class='fa fa-plus  Edit-out-logo-size' ></i> Book New Session</a></td> 
+                  </tr>  
+             ";  
+        }
+                
+ ?>
+ 
+    </table>
+  </div>
 </div>
 
-<br><br>
- <!-- ----------------------------------------------End of Appointment part------------------------------------------------------ -->
-
+  <!-- ---------------------------------------------- End of Educator Schedule part------------------------------------------------------ -->
+<br><br><br><br><br>
     <!--  ------------------------------------------------ footer part part------------------------------------------------------ -->
     <footer class="w3-teal">
       <div class="w3-container">

@@ -1,17 +1,21 @@
 <html>
-<title>Student-My Appointment</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Educator-My Appointment</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">  
+  </head>
 <body>
 <?php 
     session_start();
     if (!isset($_SESSION['college_id']))
     header("Location: login.php");
    ?>
-  <!-- ----------------------------------------------------header part------------------------------------------------------ -->
-  <?php include("loginDB.php");
+    <!-- ----------------------------------------------------header part------------------------------------------------------ -->
+    <?php include("login_db.php");
     if( $_SESSION["user_type"] == 'student') {
          include ("student_header.php");
       } 
@@ -26,14 +30,13 @@
 
  <!-- ---------------------------------------------- End of header part------------------------------------------------------ -->
  <!-- ---------------------------------------------- Appointment part------------------------------------------------------ -->
- <div class="w3-panel w3-padding-64">
-  <h2>My Appointments</h2>
+<div class="w3-panel w3-padding-64">
+  <h2>My Appointment</h2>
   <div class="w3-responsive">
   <table class="w3-table-all">
     <thead>
       <tr class="w3-teal">
-        
-        <th>Educator Name</th>
+        <th>Student id</th>
         <th>course</th>
         <th>Date</th>
         <th>Time</th>
@@ -41,19 +44,17 @@
     </thead>
     <tbody>
   <?php
-  include 'dbCon.php';
-  $query="select * from `StuSession` WHERE `stuid`='$_SESSION[college_id]'"; // Fetch all the data from the table 
+  include 'db_con.php';
+  $query="select * from StuSession where `eduName`='$_SESSION[name]'"; // Fetch all the data from the table
   $result=mysqli_query($conn,$query);
   ?>
   <?php if ($result->num_rows > 0): ?>
   <?php while($array=mysqli_fetch_row($result)): ?>
         <tr>
-            <td scope="row"><?php echo $array[2];?></td>
+            <td scope="row"><?php echo $array[1];?></td>
             <td><?php echo $array[3];?></td>
             <td><?php echo $array[4];?></td>
             <td><?php echo $array[5];?></td>
-            
-            
         </tr>
   <?php endwhile; ?>
   <?php else: ?>
@@ -66,12 +67,14 @@
   </table>
 </div>
 </div>
+<br>
+
 
 <br><br>
  <!-- ----------------------------------------------End of Appointment part------------------------------------------------------ -->
 
     <!--  ------------------------------------------------ footer part part------------------------------------------------------ -->
-    <footer class="w3-teal">
+    <footer class="w3-teal ">
       <div class="w3-container">
         <br />
         <div class="w3-third w3-container w3-mobile w3-small">
@@ -103,5 +106,7 @@
       </div>
     </footer>
     <!--  ---------------------------------------------- End of footer part part------------------------------------------------------ -->
-</body>
+ 
+
+  </body>
 </html> 

@@ -1,5 +1,5 @@
 <?php   
- include 'loginDB.php';  
+ include 'login_db.php';  
  $query = "select * from eduschedule WHERE `edu_name`='$_SESSION[name]'";  
  $run = mysqli_query($conn,$query);  
  ?> 
@@ -12,13 +12,9 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<?php 
-    session_start();
-    if (!isset($_SESSION['college_id']))
-    header("Location: login.php");
-   ?>
+
  <!-- ----------------------------------------------------header part------------------------------------------------------ -->
- <?php include("loginDB.php");
+ <?php include("login_db.php");
     if( $_SESSION["user_type"] == 'student') {
          include ("student_header.php");
       } 

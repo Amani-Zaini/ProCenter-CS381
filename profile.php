@@ -12,8 +12,14 @@
     />
     <title>Edite profile</title>
   </head>
+  <body>
+  <?php 
+    session_start();
+    if (!isset($_SESSION['college_id']))
+    header("Location: login.php");
+   ?>
     <!-- ----------------------------------------------------header part------------------------------------------------------ -->
-    <?php include("loginDB.php");
+    <?php include("login_db.php");
     if( $_SESSION["user_type"] == 'student') {
          include ("student_header.php");
       } 
@@ -31,9 +37,9 @@
         <br>
                 <h2>Edite profile</h2>
                 <?php 
-                   include "LoginDB.php";?>
+                   include "login_db.php";?>
                 <?php 
-                include "dbCon.php";
+                include "db_con.php";
                 if (isset($_POST['submit'])) {
                   $name =  $_POST['name'];
                   $password =  $_POST['password'];
@@ -52,6 +58,11 @@
                   <br>
                   <p>
                     <label class="w3-text-white"><b><?php echo $_SESSION['user_type'];?> Name</b></label>
+                    <?php //$userName=$_SESSION['name'];
+                    // include "dbCon.php";
+                    // $sql="SELECT name, password, FROM login WHERE college_id = '" . $_SESSION['college_id']."'"; 
+                    // mysqli_query($conn, $sql);
+                    ?>
                     <input class="w3-input w3-border w3-round" name="name" type="text" value=<?php echo $_SESSION['name'];?>  />
                   </p>
                   <br>
@@ -71,6 +82,7 @@
 
             </form>
       </div>
+  </body>
     <!--  ------------------------------------------------ footrt part part------------------------------------------------------ -->
    <br><br>
      <footer class="w3-teal">

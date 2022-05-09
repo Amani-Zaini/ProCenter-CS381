@@ -10,7 +10,7 @@
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <title>CSE ProCenter </title>
   </head>
-  <script src="main.js"></script>
+  <script src="redirect.js"></script>
   <body>
   <?php 
     session_start();
@@ -19,7 +19,7 @@
    ?>
     <!-- ----------------------------------------------------header part------------------------------------------------------ -->
     
-    <?php include("loginDB.php");
+    <?php include("login_db.php");
     if( $_SESSION["user_type"] == 'student') {
          include ("student_header.php");
       } 
@@ -45,7 +45,7 @@
           
 
           <?php
-            include 'dbCon.php';
+            include 'db_con.php';
             $query="select * from eduschedule"; // Fetch all the data from the table customers
             $result=mysqli_query($conn,$query);
             ?>

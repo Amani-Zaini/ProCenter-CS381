@@ -11,12 +11,16 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />    
-    <script src="Javascript.js"></script>
+    <script src="redirect.js"></script>
   </head>
   <body>
-   
+  <?php 
+    session_start();
+    if (!isset($_SESSION['college_id']))
+    header("Location: login.php");
+   ?>
     <!-- ----------------------------------------------------header part------------------------------------------------------ -->
-    <?php include("loginDB.php");
+    <?php include("login_db.php");
     if( $_SESSION["user_type"] == 'student') {
          include ("student_header.php");
       } 
@@ -44,10 +48,10 @@
             programming center!
           </p>
           <br />
-          <button id="find-edu" onclick="redirectCreateSch()" class="w3-teal w3-border w3-round-xlarge w3-padding">
+          <button  onclick="redirectCreateSch()" class="w3-teal w3-border w3-round-xlarge w3-padding">
             Create Schedule
           </button>   
-          <button id="be-edu" onclick="redirectViewApp()" class="w3-white w3-border w3-round-xlarge w3-padding">
+          <button  onclick="redirectViewApp()" class="w3-white w3-border w3-round-xlarge w3-padding">
             View Appointment
           </button>
        

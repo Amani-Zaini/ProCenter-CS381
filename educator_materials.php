@@ -1,4 +1,4 @@
-<?php include 'filesLogic.php';?>
+<?php include 'files_logic.php';?>
 <!DOCTYPE html>
 <html>
 <title>Educator-My materials</title>
@@ -14,7 +14,7 @@
     header("Location: login.php");
    ?>
 <!-- ----------------------------------------------------header part------------------------------------------------------ -->
-<?php include("loginDB.php");
+<?php include("login_db.php");
     if( $_SESSION["user_type"] == 'student') {
          include ("student_header.php");
       } 
@@ -44,15 +44,24 @@
 </tr>
 </thead>
 <tbody>
-  <?php foreach ($files as $file): ?>
+  <?php 
+ if ($result2->num_rows > 0): 
+  foreach ($files as $file): ?>
     <tr>
       <td><?php echo $file['stu_id']; ?></td>
       <td><?php echo $file['name']; ?></td>
       <td><?php echo floor($file['size'] / 1000) . ' KB'; ?></td>
       <td><?php echo $file['downloads']; ?></td>
-      <td><a href="student-materials.php?file_id=<?php echo $file['no'] ?>">Download</a></td>
+      <td><a href="student_materials.php?file_id=<?php echo $file['no'] ?>">Download</a></td>
     </tr>
   <?php endforeach;?>
+ 
+  <?php else: ?>
+        <tr>
+        <td colspan="4" rowspan="1" headers="" class="w3-center">No materials is Found</td>
+        </tr>
+  <?php endif; ?>
+  <?php mysqli_free_result($result); ?>
 <!-- ---------------------------------------------- End of Download ------------------------------------------------------ -->
 <!-- ---------------------------------------------- Upload ------------------------------------------------------ -->
 </tbody>

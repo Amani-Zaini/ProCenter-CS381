@@ -19,13 +19,15 @@
   </div>
 <!-- end of the website -->
 <!------------------------------------------------Start log in form--------------------------------------------->
-
+<?php 
+include "login_db.php";
+?>
 <div class="w3-container w3-display-topmiddle w3-padding-large" > <h1>
   Welcome to <b class="w3-text-teal">ProCenter</b> 
 </h1></div>
 <div class="w3-row">
   <div class="w3-col " >
-    <form action="loginDB.php" method="post" class=" w3-container w3-card-2 width-login w3-half w3-display-right  ">
+    <form action="login_db.php" method="post" class=" w3-container w3-card-2 width-login w3-half w3-display-right  ">
     <br>
     <div>
       <h2 class="w3-center w3-text-teal "><i class="fa fa-sign-in w3-margin-right Edit-out-logo-size " ></i>Log in</h2>

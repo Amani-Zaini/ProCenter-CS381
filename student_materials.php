@@ -1,17 +1,15 @@
+<?php include 'files_logic.php';?>
 <html>
-<title>Student-My Appointment</title>
+<title>Student-My materials</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css">
+
 <body>
-<?php 
-    session_start();
-    if (!isset($_SESSION['college_id']))
-    header("Location: login.php");
-   ?>
-  <!-- ----------------------------------------------------header part------------------------------------------------------ -->
-  <?php include("loginDB.php");
+
+<!-- ----------------------------------------------------header part------------------------------------------------------ -->
+<?php include("login_db.php");
     if( $_SESSION["user_type"] == 'student') {
          include ("student_header.php");
       } 
@@ -23,53 +21,40 @@
         include ("educator_header.php");
     }
     ?>
-
  <!-- ---------------------------------------------- End of header part------------------------------------------------------ -->
- <!-- ---------------------------------------------- Appointment part------------------------------------------------------ -->
- <div class="w3-panel w3-padding-64">
-  <h2>My Appointments</h2>
-  <div class="w3-responsive">
-  <table class="w3-table-all">
-    <thead>
-      <tr class="w3-teal">
-        
-        <th>Educator Name</th>
-        <th>course</th>
-        <th>Date</th>
-        <th>Time</th>
-      </tr>
-    </thead>
-    <tbody>
-  <?php
-  include 'dbCon.php';
-  $query="select * from `StuSession` WHERE `stuid`='$_SESSION[college_id]'"; // Fetch all the data from the table 
-  $result=mysqli_query($conn,$query);
-  ?>
-  <?php if ($result->num_rows > 0): ?>
-  <?php while($array=mysqli_fetch_row($result)): ?>
-        <tr>
-            <td scope="row"><?php echo $array[2];?></td>
-            <td><?php echo $array[3];?></td>
-            <td><?php echo $array[4];?></td>
-            <td><?php echo $array[5];?></td>
-            
-            
-        </tr>
-  <?php endwhile; ?>
-  <?php else: ?>
-        <tr>
-        <td colspan="4" rowspan="1" headers="" class="w3-center">No Appointment is Found</td>
-        </tr>
-  <?php endif; ?>
-  <?php mysqli_free_result($result); ?>
-    </tbody>
-  </table>
-</div>
-</div>
+<!-- ---------------------------------------------- Materials part------------------------------------------------------ -->
+<!-- ---------------------------------------------- Download ------------------------------------------------------ -->
+<div class="w3-container w3-padding-64">
+<h2> Materials </h2>
+<table class =  "w3-table-all w3-hoverable">
+<thead>
+    <tr class="w3-teal">
+    <th>Educator name</th>
+    <th>Filename</th>
+    <th>size (in mb)</th>
+    <th>Download no</th>
+    <th>Action</th>
+</tr>
+</thead>
+<tbody>
+  
+  <?php foreach ($f as $file):?>
+    <tr>
+    <td><?php echo $file['edu_name']; ?></td>
+      <td><?php echo $file['name']; ?></td>
+      <td><?php echo floor($file['size'] / 1000) . ' KB'; ?></td>
+      <td><?php echo $file['downloads']; ?></td>
+      <td><a href="student_materials.php?file_id=<?php echo $file['no'] ?>">Download</a></td>
+    </tr>
+  <?php endforeach;?>
 
-<br><br>
- <!-- ----------------------------------------------End of Appointment part------------------------------------------------------ -->
+</tbody>
+</table>
+</div>
+<!-- ---------------------------------------------- End of Download ------------------------------------------------------ -->
 
+   <!-- ----------------------------------------------End of Materials part------------------------------------------------------ -->
+   
     <!--  ------------------------------------------------ footer part part------------------------------------------------------ -->
     <footer class="w3-teal">
       <div class="w3-container">
@@ -104,4 +89,4 @@
     </footer>
     <!--  ---------------------------------------------- End of footer part part------------------------------------------------------ -->
 </body>
-</html> 
+</html>

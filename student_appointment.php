@@ -11,7 +11,7 @@
     header("Location: login.php");
    ?>
   <!-- ----------------------------------------------------header part------------------------------------------------------ -->
-  <?php include("loginDB.php");
+  <?php include("login_db.php");
     if( $_SESSION["user_type"] == 'student') {
          include ("student_header.php");
       } 
@@ -41,7 +41,7 @@
     </thead>
     <tbody>
   <?php
-  include 'dbCon.php';
+  include 'db_con.php';
   $query="select * from `StuSession` WHERE `stuid`='$_SESSION[college_id]'"; // Fetch all the data from the table 
   $result=mysqli_query($conn,$query);
   ?>
