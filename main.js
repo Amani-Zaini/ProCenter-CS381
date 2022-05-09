@@ -24,4 +24,5 @@ function redirectStuAppointment(){
       window.location  = "be-educator.php";
   }
 
+ 
   

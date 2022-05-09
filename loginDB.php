@@ -44,8 +44,18 @@ if(isset($_POST['sub']))//check wheather the user click on log in button
                
             }
            
-    
+            $cookie_name =  "user_id";
+            $cookie_value = $userid;
+            setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
+            
+            if(!isset($_COOKIE[$cookie_name])) {// $_COOKIE used to retrieve the value of the cookie 
+                echo "Cookie named '" . $cookie_name . "' is not set!";
+              } else {
+                echo "Cookie '" . $cookie_name . "' is set!<br>";
+                echo "Value is: " . $_COOKIE[$cookie_name];
+              }
 }
+
 
    
 ?>

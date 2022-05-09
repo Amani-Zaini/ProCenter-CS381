@@ -56,7 +56,7 @@
          $course=$_POST['course'];
          $date=$_POST['date'];
          $time=$_POST['time'];
-         $sql="insert into eduschedule(edu_name,course,date,time) values('$_SESSION[name]','$course','$date','$time')";
+         $sql="insert into eduschedule(edu_id,edu_name,course,date,time) values('$_SESSION[college_id]','$_SESSION[name]','$course','$date','$time')";
          if( mysqli_query($conn,$sql)){
            echo "<script>alert('New appointment is added');</script>";
           }

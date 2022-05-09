@@ -48,18 +48,18 @@
             <?php while($array=mysqli_fetch_row($result)): ?>
             <div class=" w3-card-2 w3-center w3-mobile w3-hover-shadow ">
                 <header class="w3-container w3-pale-red w3-block">
-                  <h3 class="w3-padding-4 w3-larg"><?php echo $array[1];?></h3>
+                  <h3 class="w3-padding-4 w3-larg"><?php echo $array[2];?></h3>
                 </header>
 
               <div class="w3-container w3-center">
-                <p><?php echo $array[2];?></p>
+                <p><?php echo $array[3];?></p>
                 <hr />
                 <ul>
                   <li class="w3-button w3-hover-none w3-round-xlarge w3-pale-red ">
-                  <?php echo $array[3];?>
+                  <?php echo $array[4];?>
                   </li>
                   <li class="w3-button w3-hover-none w3-round-xlarge w3-pale-red ">
-                  <?php echo $array[4];?>
+                  <?php echo $array[5];?>
                   </li>
                 </ul>
               </div>

@@ -11,7 +11,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />    
-    <script src="main.js"></script>
+    <script src="Javascript.js"></script>
   </head>
   <body>
    
@@ -44,6 +44,12 @@
             programming center!
           </p>
           <br />
+          <button id="find-edu" onclick="redirectCreateSch()" class="w3-teal w3-border w3-round-xlarge w3-padding">
+            Create Schedule
+          </button>   
+          <button id="be-edu" onclick="redirectViewApp()" class="w3-white w3-border w3-round-xlarge w3-padding">
+            View Appointment
+          </button>
        
         </div>
         <div class="w3-rest  w3-mobile">
