@@ -9,7 +9,7 @@
 <script src="main.js"></script>
 <body>
 <?php 
-    session_start();
+    
     if (!isset($_SESSION['college_id']))
     header("Location: login.php");
    ?>
@@ -58,7 +58,7 @@
  
   <?php else: ?>
         <tr>
-        <td colspan="4" rowspan="1" headers="" class="w3-center">No materials is Found</td>
+        <td colspan="5" rowspan="1" headers="" class="w3-center">No materials is Found</td>
         </tr>
   <?php endif; ?>
   <?php mysqli_free_result($result); ?>
