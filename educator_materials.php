@@ -45,7 +45,7 @@
 </thead>
 <tbody>
   <?php 
- if ($result2->num_rows > 0): 
+ if ($result->num_rows > 0): 
   foreach ($files as $file): ?>
     <tr>
       <td><?php echo $file['stu_id']; ?></td>
@@ -61,7 +61,7 @@
         <td colspan="5" rowspan="1" headers="" class="w3-center">No materials is Found</td>
         </tr>
   <?php endif; ?>
-  <?php mysqli_free_result($result2); ?>
+  <?php mysqli_free_result($result); ?>
 <!-- ---------------------------------------------- End of Download ------------------------------------------------------ -->
 <!-- ---------------------------------------------- Upload ------------------------------------------------------ -->
 </tbody>
