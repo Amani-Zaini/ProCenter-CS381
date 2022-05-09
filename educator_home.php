@@ -20,7 +20,7 @@
     header("Location: login.php");
    ?>
     <!-- ----------------------------------------------------header part------------------------------------------------------ -->
-    <?php include("loginDB.php");
+    <?php include("login_db.php");
     if( $_SESSION["user_type"] == 'student') {
          include ("student_header.php");
       } 
@@ -48,10 +48,10 @@
             programming center!
           </p>
           <br />
-          <button id="find-edu" onclick="redirectCreateSch()" class="w3-teal w3-border w3-round-xlarge w3-padding">
+          <button  onclick="redirectCreateSch()" class="w3-teal w3-border w3-round-xlarge w3-padding">
             Create Schedule
           </button>   
-          <button id="be-edu" onclick="redirectViewApp()" class="w3-white w3-border w3-round-xlarge w3-padding">
+          <button  onclick="redirectViewApp()" class="w3-white w3-border w3-round-xlarge w3-padding">
             View Appointment
           </button>
        

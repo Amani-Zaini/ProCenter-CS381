@@ -1,12 +1,12 @@
 <?php   
 
- include 'dbCon.php';  
+ include 'db_con.php';  
  if (isset($_GET['id'])) {  
       $id = $_GET['id'];  
       $query = "DELETE FROM `eduschedule` WHERE id = '$id'";  
       $run = mysqli_query($conn,$query);  
         if ($run) {  
-           header('location:educator-schedule.php'); 
+           header('location:educator_schedule.php'); 
         //    header('location:index.php');  
         }
       else{  

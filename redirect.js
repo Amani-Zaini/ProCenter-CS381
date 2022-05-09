@@ -1,7 +1,7 @@
 function redirectCreateSch(){
-    window.location  = "educator-schedule.php";
+    window.location  = "educator_schedule.php";
 }
 
 function redirectViewApp(){
-  window.location  = "educator-appointment.php";
+  window.location  = "educator_appointment.php";
 }

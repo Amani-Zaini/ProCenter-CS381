@@ -19,7 +19,7 @@
     header("Location: login.php");
    ?>
     <!-- ----------------------------------------------------header part------------------------------------------------------ -->
-    <?php include("loginDB.php");
+    <?php include("login_db.php");
     if( $_SESSION["user_type"] == 'student') {
          include ("student_header.php");
       } 
@@ -37,9 +37,9 @@
         <br>
                 <h2>Edite profile</h2>
                 <?php 
-                   include "LoginDB.php";?>
+                   include "login_db.php";?>
                 <?php 
-                include "dbCon.php";
+                include "db_con.php";
                 if (isset($_POST['submit'])) {
                   $name =  $_POST['name'];
                   $password =  $_POST['password'];

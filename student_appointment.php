@@ -1,11 +1,9 @@
 <html>
-<title>The Requestes</title>
+<title>Student-My Appointment</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="Requests.css">
-<link  rel="stylesheet" href="style.css">
-
 <body>
 <?php 
     session_start();
@@ -25,65 +23,54 @@
         include ("educator_header.php");
     }
     ?>
-   <!-- ---------------------------------------------- End of header part------------------------------------------------------ -->
- <!-- ---------------------------------------------- Requests part------------------------------------------------------ -->
-<div class="w3-container w3-padding">
-  <h2>Contact Messages</h2>
+
+ <!-- ---------------------------------------------- End of header part------------------------------------------------------ -->
+ <!-- ---------------------------------------------- Appointment part------------------------------------------------------ -->
+ <div class="w3-panel w3-padding-64">
+  <h2>My Appointments</h2>
   <div class="w3-responsive">
   <table class="w3-table-all">
     <thead>
       <tr class="w3-teal">
-        <th>
-          Name
-        </th>
-        <th>
-          id
-        </th>
-        <th>
-          subject
-        </th>
-        <th>
-          Message
-        </th>
+        
+        <th>Educator Name</th>
+        <th>course</th>
+        <th>Date</th>
+        <th>Time</th>
       </tr>
-<?php
-include 'db_con.php';
-$query="select * from contact"; // Fetch all the data 
-$run = mysqli_query($conn, $query);
-if ($num = mysqli_num_rows($run)>0) {  
-  while ($row = mysqli_fetch_assoc($run)) {  
-?>
-	<tr >
-		<td>
-			<?php echo $row['fname']; ?>
-			<?php echo $row['lname']; ?>
-		</td>
-		<td>
-			<?php echo $row['id']; ?>
-		</td>
-    <td>
-			<?php echo $row['subject']; ?>
-		</td>
-    <td>
-			<?php echo $row['message']; ?>
-		</td>
-	</tr>
-<?php }}
-else{
-  ?>
-  <tr>
-  <td colspan="5" rowspan="1" headers="" class="w3-center">No message is found</td>
-  </tr>
+    </thead>
+    <tbody>
   <?php
-} ?>
- 
-</table>
+  include 'db_con.php';
+  $query="select * from `StuSession` WHERE `stuid`='$_SESSION[college_id]'"; // Fetch all the data from the table 
+  $result=mysqli_query($conn,$query);
+  ?>
+  <?php if ($result->num_rows > 0): ?>
+  <?php while($array=mysqli_fetch_row($result)): ?>
+        <tr>
+            <td scope="row"><?php echo $array[2];?></td>
+            <td><?php echo $array[3];?></td>
+            <td><?php echo $array[4];?></td>
+            <td><?php echo $array[5];?></td>
+            
+            
+        </tr>
+  <?php endwhile; ?>
+  <?php else: ?>
+        <tr>
+        <td colspan="4" rowspan="1" headers="" class="w3-center">No Appointment is Found</td>
+        </tr>
+  <?php endif; ?>
+  <?php mysqli_free_result($result); ?>
+    </tbody>
+  </table>
 </div>
 </div>
- <!-- ----------------------------------------------End of Requests part------------------------------------------------------ -->
+
+<br><br>
+ <!-- ----------------------------------------------End of Appointment part------------------------------------------------------ -->
 
     <!--  ------------------------------------------------ footer part part------------------------------------------------------ -->
-    
     <footer class="w3-teal">
       <div class="w3-container">
         <br />
