@@ -39,6 +39,7 @@
     <section class="section-margin ">
       <div class="w3-row">
         <div class="w3-col  w3-panel w3-mobile" style="width:40%">
+        <br><br>
           <h1>
             Find your<br />
             best <b class="w3-text-teal">Educator</b> & Book a session
