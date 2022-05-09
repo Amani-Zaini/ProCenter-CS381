@@ -14,7 +14,11 @@
     <script src="main.js"></script>
   </head>
   <body>
-   
+   <?php 
+    session_start();
+    if (!isset($_SESSION['college_id']))
+    header("Location: login.php");
+   ?>
     <!-- ----------------------------------------------------header part------------------------------------------------------ -->
     <?php include("loginDB.php");
     if( $_SESSION["user_type"] == 'student') {

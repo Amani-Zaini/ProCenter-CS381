@@ -19,7 +19,9 @@
   </div>
 <!-- end of the website -->
 <!------------------------------------------------Start log in form--------------------------------------------->
-
+<?php 
+include "loginDB.php";
+?>
 <div class="w3-container w3-display-topmiddle w3-padding-large" > <h1>
   Welcome to <b class="w3-text-teal">ProCenter</b> 
 </h1></div>
