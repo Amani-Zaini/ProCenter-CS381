@@ -112,7 +112,7 @@
 <div id="Back-Ground-Circle-4"></div><br>
 <!-- -----------------------------------End of the form----------------------------------------  -->
    <!--------------------------------Start the footer--------------------------------->
-   <footer class="w3-teal">
+<footer class="w3-teal">
     <div class="w3-container">
       <br />
       <div class="w3-third w3-container w3-mobile w3-small">
@@ -142,7 +142,7 @@
     <div class="w3-display-bottom w3-container">
       <span>&#169;</span>2022 All Right Reserved by CSE ProCenter
     </div>
-  </footer>
+</footer>
     <!--------------------------------End the footer--------------------------------->
   
 </body>

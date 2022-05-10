@@ -9,20 +9,10 @@
       $time = $_GET['time']; 
       $query = "insert into StuSession(stuid,eduName,course,date,time) values('$id','$name','$course','$date','$time')"; 
       $run = mysqli_query($conn,$query);  
-
-        if ($run) {  
-
-           
-           echo "<script> 
-         alert('new appoitnment is added');
-         window.location.href='student_schedule.php'; </script>";
-           //header('Refresh: 5; URL=student_schedule.php.php'); for future ehe
-
-
       if ($run) {  
          echo "
          <script> 
-         alert('new appoitnment is added');
+         alert('New Appoitnment is added');
          window.location.href='student_schedule.php'; </script>";
 
         }
@@ -30,5 +20,5 @@
            echo "Error: ".mysqli_error($conn);  
         }  
  } 
-} 
+
 ?>

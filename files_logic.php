@@ -28,7 +28,9 @@ if (isset($_POST['save'])) { // if save button on the form is clicked
                 // Image db insert sql
                 $insert = "INSERT into materials (id_user,stu_id,edu_name,name, size, downloads) VALUES ('$_SESSION[college_id]','$studentID','$_SESSION[name]','$filename',now(),1)";
                 if(mysqli_query($conn, $insert)){
-                    echo 'Data inserted successfully';
+                    echo "<script> 
+                    alert('file has been uploaded successfully');
+                    window.location.href='educator_materials.php'; </script>";
                     }
                 else{
                     echo 'Error: '.mysqli_error($conn);

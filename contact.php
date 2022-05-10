@@ -37,6 +37,7 @@
     <div class="w3-half margin-form-1 w3-center image-width" >
       <img src="images/Contact us.svg"  alt="contact us image" >
    </div>
+  </div>
 <!------------------------------------------------Start contact us form--------------------------------------------->
  <?php 
  include 'db_con.php';  
@@ -69,6 +70,7 @@
         <div class="w3-rest">
           <input class="w3-input w3-border" name="first" type="text" placeholder="First Name" required>
         </div>
+      </div>
     </div>
     
     <div class="w3-row w3-section">
@@ -76,6 +78,7 @@
         <div class="w3-rest">
           <input class="w3-input w3-border" name="last" type="text" placeholder="Last Name" required>
         </div>
+      </div>
     </div>
     
     <div class="w3-row w3-section">
@@ -83,6 +86,7 @@
         <div class="w3-rest">
           <input class="w3-input w3-border" name="id" type="text" placeholder="ID" required>
         </div>
+      </div>
     </div>
     
     <div class="w3-row w3-section">
@@ -90,6 +94,7 @@
         <div class="w3-rest">
           <input class="w3-input w3-border" name="subject" type="text" placeholder="Subject" required>
         </div>
+      </div>
     </div>
     
     <div class="w3-row w3-section">
@@ -97,47 +102,53 @@
         <div class="w3-rest">
           <input class="give-height w3-input w3-border" name="message" type="text" placeholder="Write comment..." required>
         </div>
+      </div>
     </div>
 
-    <td><button type="submit"  name="submit" class="w3-white w3-border-teal w3-round-xlarge w3-padding w3-block">
-      Send </button>
+    <div>
+      <td>
+        <button type="submit" name="submit" class="w3-btn w3-white w3-border-teal w3-round-xlarge w3-margin w3-block">
+        Send 
+        </button>
       </td>
-</div>
-    </form>
+    </div>
+
+  </form>
     
     <br>
   <!--------------------------------Start the footer--------------------------------->
   <footer class="w3-teal">
-      <div class="w3-container">
-        <br />
-        <div class="w3-third w3-container w3-mobile w3-small">
-          <img
-            src="images/location.png"
-            alt="location logo"
-            class="social-icons"
-          />
-          <b>Our Address</b>
-          <p>
-            Yanbu University College (Female Campus)·<br />
-            Department of Computer Science.
-          </p>
-        </div>
-        <div class="w3-third w3-container w3-mobile w3-small">
-          <img
-            src="images/email.png"
-            alt="location logo"
-            class="social-icons"
-          />
-          <b>Email Us at</b>
-          <p>ProCenter@gmail.com</p>
-        </div>
-
-        
-      </div><br /><br />
-      <div class="w3-display-bottom w3-container">
-        <span>&#169;</span>2022 All Right Reserved by CSE ProCenter
+    <div class="w3-container">
+      <br />
+      <div class="w3-third w3-container w3-mobile w3-small">
+        <img
+          src="images/location.png"
+          alt="location logo"
+          class="social-icons"
+        />
+        <b>Our Address</b>
+        <p>
+          Yanbu University College (Female Campus)·<br />
+          Department of Computer Science.
+        </p>
       </div>
-    </footer>
+      <div class="w3-third w3-container w3-mobile w3-small">
+        <img
+          src="images/email.png"
+          alt="location logo"
+          class="social-icons"
+        />
+        <b>Email Us at</b>
+        <p>ProCenter@gmail.com</p>
+      </div>
+
+      
+    </div><br /><br />
+    
+    <div class="w3-display-bottom w3-container">
+      <span>&#169;</span>2022 All Right Reserved by CSE ProCenter
+    </div>
+  </footer>
     <!--------------------------------End the footer--------------------------------->
 </body>
 </html>

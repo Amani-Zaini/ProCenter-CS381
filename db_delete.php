@@ -6,8 +6,7 @@
       $query = "DELETE FROM `eduschedule` WHERE id = '$id'";  
       $run = mysqli_query($conn,$query);  
         if ($run) {  
-           header('location:educator_schedule.php'); 
-        //    header('location:index.php');  
+           header('location:educator_schedule.php');  
         }
       else{  
            echo "Error: ".mysqli_error($conn);  

@@ -45,7 +45,7 @@
 </thead>
 <tbody>
   <?php 
- if ($result->num_rows > 0): 
+ if (mysqli_num_rows($result) > 0):  
   foreach ($files as $file): ?>
     <tr>
       <td><?php echo $file['stu_id']; ?></td>

@@ -49,7 +49,7 @@
             $query="select * from eduschedule"; // Fetch all the data from the table customers
             $result=mysqli_query($conn,$query);
             ?>
-            <?php if ($result->num_rows > 0): ?>
+            <?php if (mysqli_num_rows($result) > 0): ?>
             <?php while($array=mysqli_fetch_row($result)): ?>
             <div class=" w3-card-2 w3-center w3-mobile w3-hover-shadow ">
                 <header class="w3-container w3-pale-red w3-block">
@@ -82,8 +82,6 @@
         </div>
       </div>
     </div>
-    
-      
     </section>
     <!--  ---------------------------------------------- End of Educator card part------------------------------------------------------ -->
 

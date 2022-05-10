@@ -48,7 +48,7 @@
   $query="select * from StuSession where `eduName`='$_SESSION[name]'"; // Fetch all the data from the table
   $result=mysqli_query($conn,$query);
   ?>
-  <?php if ($result->num_rows > 0): ?>
+  <?php if (mysqli_num_rows($result) > 0): ?>
   <?php while($array=mysqli_fetch_row($result)): ?>
         <tr>
             <td scope="row"><?php echo $array[1];?></td>

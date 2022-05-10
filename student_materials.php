@@ -43,7 +43,7 @@
 <tbody>
   
   <?php 
-  if ($result2->num_rows > 0): 
+  if (mysqli_num_rows($result2) > 0):
   foreach ($f as $file):?>
     <tr>
     <td><?php echo $file['edu_name']; ?></td>
