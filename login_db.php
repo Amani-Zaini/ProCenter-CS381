@@ -11,7 +11,12 @@ if(isset($_POST['sub']))//check wheather the user click on log in button
             $userid= $_POST["college_id"];
             $pass= $_POST["password"];
             
-            $sql=mysqli_query($conn,"SELECT * FROM `login` WHERE `college_id`='$userid' AND `password`='$pass'");
+            $cookie_name =  "user_id";
+             $cookie_value = $userid;
+             setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
+            
+             
+           $sql=mysqli_query($conn,"SELECT * FROM `login` WHERE `college_id`='$userid' AND `password`='$pass'");
             $row  = mysqli_fetch_array($sql);//mysqli_fetch_array() function fetches(mean get) a result row as an associative array, a numeric array, or both.
             if(is_array($row))//The is_array() function checks whether a variable is an array or not.
             {
@@ -44,17 +49,8 @@ if(isset($_POST['sub']))//check wheather the user click on log in button
                
             }
            
-            // $cookie_name =  "user_id";
-            // $cookie_value = $userid;
-            // setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
-            
-            // if(!isset($_COOKIE[$cookie_name])) {// $_COOKIE used to retrieve the value of the cookie 
-            //     echo "Cookie named '" . $cookie_name . "' is not set!";
-            //   } else {
-            //     echo "Cookie '" . $cookie_name . "' is set!<br>";
-            //     echo "Value is: " . $_COOKIE[$cookie_name];
-            //   }
-}
+             
+        }
 
 
    
