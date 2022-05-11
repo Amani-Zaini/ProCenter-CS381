@@ -11,9 +11,9 @@ if(isset($_POST['sub']))//check wheather the user click on log in button
             $userid= $_POST["college_id"];
             $pass= $_POST["password"];
             
-            $cookie_name =  "user_id";
-             $cookie_value = $userid;
-             setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
+            //$cookie_name =  "user_id";
+            // $cookie_value = $userid;
+            // setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
             
              
            $sql=mysqli_query($conn,"SELECT * FROM `login` WHERE `college_id`='$userid' AND `password`='$pass'");
