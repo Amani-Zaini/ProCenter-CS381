@@ -48,8 +48,6 @@
 
         include "db_con.php";
         $query="select * from Requests"; // Fetch all the data 
-        $run = mysqli_query($conn, $query);
-        $query = "SELECT * FROM Requests ";
         $result = mysqli_query($conn, $query);
         $i = 1;
         while ($row = mysqli_fetch_array($result)) {

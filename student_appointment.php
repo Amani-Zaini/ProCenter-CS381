@@ -55,7 +55,7 @@
            <td>".$result['course']."</td>  
            <td>".$result['date']."</td>  
            <td>".$result['time']."</td> 
-           <td><a href='db_studelete.php?stuid=".$_SESSION['college_id']."&date=".$result['date']."&time=".$result['time']."' class='w3-button w3-teal w3-border-teal w3-round-xlarge'><i class='fa fa-close  Edit-out-logo-size' ></i> Cancel</a></td> 
+           <td><a href='db_studelete.php?app_no=".$result['app_no']."' class='w3-button w3-teal w3-border-teal w3-round-xlarge'><i class='fa fa-close  Edit-out-logo-size' ></i> Cancel</a></td> 
            </tr>  
       ";  
      
